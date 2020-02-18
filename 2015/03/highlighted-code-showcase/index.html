@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.64.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Apylers">
-<meta name="keywords" content="">
+<meta name="keywords" content=", development, next-gen">
 <meta name="description" content="Tranquilpeak Hugo theme have its own theme to highlight source code. It&rsquo;s based on GitHub theme: simple and elegant. Check out how it sublimate source codes.">
 
 
@@ -17,7 +17,7 @@
 <meta name="twitter:title" content="highlighted code showcase">
 <meta property="og:url" content="https://apylers.github.io/2015/03/highlighted-code-showcase/">
 <meta property="twitter:url" content="https://apylers.github.io/2015/03/highlighted-code-showcase/">
-<meta property="og:site_name" content="">
+<meta property="og:site_name" content="幸运小站">
 <meta property="og:description" content="Tranquilpeak Hugo theme have its own theme to highlight source code. It&rsquo;s based on GitHub theme: simple and elegant. Check out how it sublimate source codes.">
 <meta name="twitter:description" content="Tranquilpeak Hugo theme have its own theme to highlight source code. It&rsquo;s based on GitHub theme: simple and elegant. Check out how it sublimate source codes.">
 <meta property="og:locale" content="zh-cn">
@@ -76,12 +76,11 @@
     <link rel="canonical" href="https://apylers.github.io/2015/03/highlighted-code-showcase/">
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
     
     
-    <link rel="stylesheet" href="/css/style-0ri3opg4efuk4gz2qtahwoclvysqkhrukp4g7gxcx17fzmeqanpjwkbhj2.min.css" />
+    <link rel="stylesheet" href="/css/style.min.css" />
     
     
 
@@ -89,19 +88,49 @@
       
     
     
+
+<script
+    type="text/javascript"
+    async
+    src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+>
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[\[','\]\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+    });
+
+    MathJax.Hub.Queue(function() {
+        
+        
+        
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+
   </head>
 
   <body>
     <div id="blog">
       <header id="header" data-behavior="4">
-  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <i id="btn-open-sidebar" class="fas fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="/"></a>
+    <a class="header-title-link" href="/">幸运小站</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="/">
+         href="/#about">
     
     
     
@@ -132,7 +161,7 @@
     
       <a class="sidebar-button-link " href="/">
     
-      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      <i class="sidebar-button-icon fas fa-home"></i>
       
       <span class="sidebar-button-desc">首页</span>
     </a>
@@ -142,7 +171,7 @@
     
       <a class="sidebar-button-link " href="/categories">
     
-      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      <i class="sidebar-button-icon fas fa-bookmark"></i>
       
       <span class="sidebar-button-desc">分类</span>
     </a>
@@ -152,7 +181,7 @@
     
       <a class="sidebar-button-link " href="/tags">
     
-      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      <i class="sidebar-button-icon fas fa-tags"></i>
       
       <span class="sidebar-button-desc">标签</span>
     </a>
@@ -162,7 +191,7 @@
     
       <a class="sidebar-button-link " href="/archives">
     
-      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      <i class="sidebar-button-icon fas fa-archive"></i>
       
       <span class="sidebar-button-desc">归档</span>
     </a>
@@ -176,7 +205,7 @@
     
       <a class="sidebar-button-link " href="https://github.com/apylers" target="_blank" rel="noopener">
     
-      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      <i class="sidebar-button-icon fab fa-github"></i>
       
       <span class="sidebar-button-desc">GitHub</span>
     </a>
@@ -186,7 +215,7 @@
     
       <a class="sidebar-button-link " href="mailto://apylers@cyh.me" target="_blank" rel="noopener">
     
-      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      <i class="sidebar-button-icon fas fa-envelope"></i>
       
       <span class="sidebar-button-desc">Email</span>
     </a>
@@ -194,9 +223,19 @@
 
   <li class="sidebar-button">
     
+      <a class="sidebar-button-link " href="/#about">
+    
+      <i class="sidebar-button-icon fas fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
       <a class="sidebar-button-link " href="/index.xml">
     
-      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      <i class="sidebar-button-icon fas fa-rss"></i>
       
       <span class="sidebar-button-desc">RSS</span>
     </a>
@@ -257,10 +296,44 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              &#34;highlighted code showcase&#34;
               <p>Tranquilpeak Hugo theme have its own theme to highlight source code. It&rsquo;s based on GitHub theme: simple and elegant. Check out how it sublimate source codes.</p>
-<h1 id="table-of-contents">目录</h1><nav id="TableOfContents"></nav>
+
+<h1 id="table-of-contents">目录</h1><nav id="TableOfContents">
+<ul>
+<li><a href="#tabbed-code-block">Tabbed code block</a></li>
+<li><a href="#apacheconf">ApacheConf</a></li>
+<li><a href="#bash">Bash</a></li>
+<li><a href="#coffeescript">Coffeescript</a></li>
+<li><a href="#c">C++</a></li>
+<li><a href="#cshparp">CShparp</a></li>
+<li><a href="#css">CSS</a></li>
+<li><a href="#diff">DIFF</a></li>
+<li><a href="#http">HTTP</a></li>
+<li><a href="#ini">INI</a></li>
+<li><a href="#java">Java</a></li>
+<li><a href="#javascript">JavaScript</a></li>
+<li><a href="#json">JSON</a></li>
+<li><a href="#makefile">Makefile</a></li>
+<li><a href="#markdown">Markdown</a></li>
+<li><a href="#nginx">Nginx</a></li>
+<li><a href="#objective-c">Objective-C</a></li>
+<li><a href="#perl">Perl</a></li>
+<li><a href="#php">PHP</a></li>
+<li><a href="#python">Python</a></li>
+<li><a href="#ruby">Ruby</a></li>
+<li><a href="#sql">SQL</a></li>
+<li><a href="#html">HTML</a></li>
+<li><a href="#puppet">Puppet</a></li>
+<li><a href="#less">Less</a></li>
+<li><a href="#scss">SCSS</a></li>
+<li><a href="#stylus">Stylus</a></li>
+<li><a href="#go">Go</a></li>
+<li><a href="#swift">Swift</a></li>
+</ul>
+</nav>
+
 <h1 id="tabbed-code-block">Tabbed code block</h1>
+
 
 
   
@@ -416,7 +489,9 @@ li[lang=ru] {
     
   </div>
 </figure>
+
 <h1 id="apacheconf">ApacheConf</h1>
+
 
   
     
@@ -469,7 +544,9 @@ Allow from All
     </tbody>
   </table>
 </figure>
+
 <h1 id="bash">Bash</h1>
+
 
   
     
@@ -533,7 +610,9 @@ genApacheConf(){
     </tbody>
   </table>
 </figure>
+
 <h1 id="coffeescript">Coffeescript</h1>
+
 
   
   
@@ -608,7 +687,9 @@ genApacheConf(){
     </tbody>
   </table>
 </figure>
+
 <h1 id="c">C++</h1>
+
 
   
     
@@ -678,7 +759,9 @@ namespace foo {
     </tbody>
   </table>
 </figure>
+
 <h1 id="cshparp">CShparp</h1>
+
 
   
     
@@ -737,7 +820,9 @@ async Task&lt;int&gt; AccessTheWebAsync()
     </tbody>
   </table>
 </figure>
+
 <h1 id="css">CSS</h1>
+
 
   
     
@@ -796,7 +881,9 @@ li[lang=ru] {
     </tbody>
   </table>
 </figure>
+
 <h1 id="diff">DIFF</h1>
+
 
   
     
@@ -860,7 +947,9 @@ li[lang=ru] {
     </tbody>
   </table>
 </figure>
+
 <h1 id="http">HTTP</h1>
+
 
   
     
@@ -900,7 +989,9 @@ Content-Length: 19
     </tbody>
   </table>
 </figure>
+
 <h1 id="ini">INI</h1>
+
 
   
     
@@ -946,7 +1037,9 @@ AskAboutIgnoredPlugins=0</code></pre>
     </tbody>
   </table>
 </figure>
+
 <h1 id="java">Java</h1>
+
 
   
     
@@ -1015,7 +1108,9 @@ abstract class SomeAbstractClass {
     </tbody>
   </table>
 </figure>
+
 <h1 id="javascript">JavaScript</h1>
+
 
   
     
@@ -1065,7 +1160,9 @@ abstract class SomeAbstractClass {
     </tbody>
   </table>
 </figure>
+
 <h1 id="json">JSON</h1>
+
 
   
     
@@ -1111,7 +1208,9 @@ abstract class SomeAbstractClass {
     </tbody>
   </table>
 </figure>
+
 <h1 id="makefile">Makefile</h1>
+
 
   
     
@@ -1158,7 +1257,9 @@ clean:
     </tbody>
   </table>
 </figure>
+
 <h1 id="markdown">Markdown</h1>
+
 
   
     
@@ -1214,7 +1315,9 @@ hello world
     </tbody>
   </table>
 </figure>
+
 <h1 id="nginx">Nginx</h1>
+
 
   
     
@@ -1294,7 +1397,9 @@ http {
     </tbody>
   </table>
 </figure>
+
 <h1 id="objective-c">Objective-C</h1>
+
 
   
     
@@ -1371,7 +1476,9 @@ http {
     </tbody>
   </table>
 </figure>
+
 <h1 id="perl">Perl</h1>
+
 
   
     
@@ -1437,7 +1544,9 @@ POD till the end of file</code></pre>
     </tbody>
   </table>
 </figure>
+
 <h1 id="php">PHP</h1>
+
 
   
     
@@ -1509,7 +1618,9 @@ Label:
     </tbody>
   </table>
 </figure>
+
 <h1 id="python">Python</h1>
+
 
   
     
@@ -1555,7 +1666,9 @@ class SomeClass:
     </tbody>
   </table>
 </figure>
+
 <h1 id="ruby">Ruby</h1>
+
 
   
     
@@ -1617,7 +1730,9 @@ hash = {1 =&gt; &#39;one&#39;, 2 =&gt; &#39;two&#39;}
     </tbody>
   </table>
 </figure>
+
 <h1 id="sql">SQL</h1>
+
 
   
     
@@ -1670,7 +1785,9 @@ COMMIT</code></pre>
     </tbody>
   </table>
 </figure>
+
 <h1 id="html">HTML</h1>
+
 
   
     
@@ -1728,7 +1845,9 @@ COMMIT</code></pre>
     </tbody>
   </table>
 </figure>
+
 <h1 id="puppet">Puppet</h1>
+
 
   
     
@@ -1865,7 +1984,9 @@ COMMIT</code></pre>
     </tbody>
   </table>
 </figure>
+
 <h1 id="less">Less</h1>
+
 
   
     
@@ -1923,7 +2044,9 @@ div &gt; p, p ~ ul, input[type=&#34;radio&#34;] {
     </tbody>
   </table>
 </figure>
+
 <h1 id="scss">SCSS</h1>
+
 
   
     
@@ -2005,7 +2128,9 @@ div &gt; p, p ~ ul, input[type=&#34;radio&#34;] {
     </tbody>
   </table>
 </figure>
+
 <h1 id="stylus">Stylus</h1>
+
 
   
     
@@ -2064,7 +2189,9 @@ button
     </tbody>
   </table>
 </figure>
+
 <h1 id="go">Go</h1>
+
 
   
     
@@ -2132,7 +2259,9 @@ func main() {
     </tbody>
   </table>
 </figure>
+
 <h1 id="swift">Swift</h1>
+
 
   
     
@@ -2176,7 +2305,7 @@ func main() {
       </tr>
     </tbody>
   </table>
-</figure>            
+</figure>
 			  
             </div>
           </div>
@@ -2207,7 +2336,7 @@ func main() {
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="/2014/10/tags-plugins-showcase/" data-tooltip="Tags plugins showcase">
               
-                  <i class="fa fa-angle-left"></i>
+                  <i class="fas fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                 </a>
             </li>
@@ -2216,7 +2345,7 @@ func main() {
                 <a class="post-action-btn btn btn--default tooltip--top" href="/2015/05/cover-image-showcase/" data-tooltip="Cover image showcase">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
-                  <i class="fa fa-angle-right"></i>
+                  <i class="fas fa-angle-right"></i>
                 </a>
             </li>
           
@@ -2226,7 +2355,7 @@ func main() {
       
         <li class="post-action hide-lg hide-md hide-sm">
           <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
+            <i class="fas fa-share-alt"></i>
           </a>
         </li>
         
@@ -2236,7 +2365,7 @@ func main() {
         
           <a class="post-action-btn btn btn--default" href="#table-of-contents">
         
-          <i class="fa fa-list"></i>
+          <i class="fas fa-list"></i>
         </a>
       </li>
     </ul>
@@ -2250,7 +2379,7 @@ func main() {
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2020 Apylers. All Rights Reserved
+    &copy; 2020 Apylers. All Rights Reserved.
   </span>
 </footer>
 
@@ -2265,7 +2394,7 @@ func main() {
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="/2014/10/tags-plugins-showcase/" data-tooltip="Tags plugins showcase">
               
-                  <i class="fa fa-angle-left"></i>
+                  <i class="fas fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                 </a>
             </li>
@@ -2274,7 +2403,7 @@ func main() {
                 <a class="post-action-btn btn btn--default tooltip--top" href="/2015/05/cover-image-showcase/" data-tooltip="Cover image showcase">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
-                  <i class="fa fa-angle-right"></i>
+                  <i class="fas fa-angle-right"></i>
                 </a>
             </li>
           
@@ -2284,7 +2413,7 @@ func main() {
       
         <li class="post-action hide-lg hide-md hide-sm">
           <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
+            <i class="fas fa-share-alt"></i>
           </a>
         </li>
         
@@ -2294,7 +2423,7 @@ func main() {
         
           <a class="post-action-btn btn btn--default" href="#table-of-contents">
         
-          <i class="fa fa-list"></i>
+          <i class="fas fa-list"></i>
         </a>
       </li>
     </ul>
@@ -2303,7 +2432,7 @@ func main() {
 
       </div>
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <i id="btn-close-shareoptions" class="fas fa-close"></i>
   <ul class="share-options">
     
   </ul>
@@ -2314,7 +2443,7 @@ func main() {
     <div id="about">
   <div id="about-card">
     <div id="about-btn-close">
-      <i class="fa fa-remove"></i>
+      <i class="fas fa-remove"></i>
     </div>
     
       <img id="about-card-picture" src="https://apylers.github.io/favicon.png" alt="作者的图片" />
@@ -2325,14 +2454,14 @@ func main() {
     
     
       <div id="about-card-job">
-        <i class="fa fa-briefcase"></i>
+        <i class="fas fa-briefcase"></i>
         <br/>
         I&rsquo;m a student!
       </div>
     
     
       <div id="about-card-location">
-        <i class="fa fa-map-marker"></i>
+        <i class="fas fa-map-marker"></i>
         <br/>
         China
       </div>
@@ -2351,14 +2480,14 @@ func main() {
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.loli.net/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.loli.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/script-omeoitlhnsgntsj0zc2c9gc61uuwfhtz1uhjav7d5k47lo6rady8q0qygpc.min.js"></script>
+<script src="/js/script.min.js"></script>
 
 
 <script lang="javascript">

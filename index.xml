@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
+    <title>幸运小站</title>
     <link>https://apylers.github.io/</link>
-    <description>Recent content on </description>
+    <description>Recent content on 幸运小站</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Mon, 15 Jun 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://apylers.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -12,10 +13,10 @@
     
     <item>
       <title>Welcome to Tranquilpeak 0.4.7-BETA</title>
-      <link>https://apylers.github.io/2015/06/welcome-to-tranquilpeak-0.4.7-beta/</link>
+      <link>https://apylers.github.io/2015/06/welcome-to-the-new-tranquilpeak/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://apylers.github.io/2015/06/welcome-to-tranquilpeak-0.4.7-beta/</guid>
+      <guid>https://apylers.github.io/2015/06/welcome-to-the-new-tranquilpeak/</guid>
       <description>&lt;p&gt;Tranquilpeak is a gorgeous responsive theme for Hugo blog framework. It has many features and integrated services to improve user experience.&lt;/p&gt;</description>
     </item>
     
@@ -98,33 +99,6 @@
       
       <guid>https://apylers.github.io/2014/08/video-integrations-showcase/</guid>
       <description>&lt;p&gt;Youtube and Vimeo videos are easily integrated thanks to tags plugins. Of course, you can add video other platforms like dailymotion.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>中文測試</title>
-      <link>https://apylers.github.io/2013/10/chinese-test/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://apylers.github.io/2013/10/chinese-test/</guid>
-      <description>&lt;p&gt;This is a chinese test post to show you how chinese is displayed.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Image gallery showcase</title>
-      <link>https://apylers.github.io/2013/02/image-gallery-showcase/</link>
-      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://apylers.github.io/2013/02/image-gallery-showcase/</guid>
-      <description>&lt;p&gt;And here is the image gallery!&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>日本語テスト</title>
-      <link>https://apylers.github.io/2013/01/japanese-test/</link>
-      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://apylers.github.io/2013/01/japanese-test/</guid>
-      <description>&lt;p&gt;This is a Japanese test post to show you how japanese is displayed.&lt;/p&gt;</description>
     </item>
     
   </channel>

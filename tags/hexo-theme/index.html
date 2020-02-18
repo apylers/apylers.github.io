@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.64.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Apylers">
-<meta name="keywords" content="">
+<meta name="keywords" content=", development, next-gen">
 <meta name="description" content="Learning on the fly!">
 
 
@@ -17,7 +17,7 @@
 <meta name="twitter:title" content="hexo theme">
 <meta property="og:url" content="https://apylers.github.io/tags/hexo-theme/">
 <meta property="twitter:url" content="https://apylers.github.io/tags/hexo-theme/">
-<meta property="og:site_name" content="">
+<meta property="og:site_name" content="幸运小站">
 <meta property="og:description" content="Learning on the fly!">
 <meta name="twitter:description" content="Learning on the fly!">
 <meta property="og:locale" content="zh-cn">
@@ -51,12 +51,11 @@
     <link rel="canonical" href="https://apylers.github.io/tags/hexo-theme/">
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
     
     
-    <link rel="stylesheet" href="/css/style-0ri3opg4efuk4gz2qtahwoclvysqkhrukp4g7gxcx17fzmeqanpjwkbhj2.min.css" />
+    <link rel="stylesheet" href="/css/style.min.css" />
     
     
 
@@ -64,19 +63,49 @@
       
     
     
+
+<script
+    type="text/javascript"
+    async
+    src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+>
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[\[','\]\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+    });
+
+    MathJax.Hub.Queue(function() {
+        
+        
+        
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+
   </head>
 
   <body>
     <div id="blog">
       <header id="header" data-behavior="1">
-  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <i id="btn-open-sidebar" class="fas fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="/"></a>
+    <a class="header-title-link" href="/">幸运小站</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="/">
+         href="/#about">
     
     
     
@@ -107,7 +136,7 @@
     
       <a class="sidebar-button-link " href="/">
     
-      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      <i class="sidebar-button-icon fas fa-home"></i>
       
       <span class="sidebar-button-desc">首页</span>
     </a>
@@ -117,7 +146,7 @@
     
       <a class="sidebar-button-link " href="/categories">
     
-      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      <i class="sidebar-button-icon fas fa-bookmark"></i>
       
       <span class="sidebar-button-desc">分类</span>
     </a>
@@ -127,7 +156,7 @@
     
       <a class="sidebar-button-link " href="/tags">
     
-      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      <i class="sidebar-button-icon fas fa-tags"></i>
       
       <span class="sidebar-button-desc">标签</span>
     </a>
@@ -137,7 +166,7 @@
     
       <a class="sidebar-button-link " href="/archives">
     
-      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      <i class="sidebar-button-icon fas fa-archive"></i>
       
       <span class="sidebar-button-desc">归档</span>
     </a>
@@ -151,7 +180,7 @@
     
       <a class="sidebar-button-link " href="https://github.com/apylers" target="_blank" rel="noopener">
     
-      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      <i class="sidebar-button-icon fab fa-github"></i>
       
       <span class="sidebar-button-desc">GitHub</span>
     </a>
@@ -161,7 +190,7 @@
     
       <a class="sidebar-button-link " href="mailto://apylers@cyh.me" target="_blank" rel="noopener">
     
-      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      <i class="sidebar-button-icon fas fa-envelope"></i>
       
       <span class="sidebar-button-desc">Email</span>
     </a>
@@ -169,9 +198,19 @@
 
   <li class="sidebar-button">
     
+      <a class="sidebar-button-link " href="/#about">
+    
+      <i class="sidebar-button-icon fas fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
       <a class="sidebar-button-link " href="/index.xml">
     
-      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      <i class="sidebar-button-icon fas fa-rss"></i>
       
       <span class="sidebar-button-desc">RSS</span>
     </a>
@@ -209,7 +248,7 @@
 <article class="postShorten postShorten--thumbnailimg-top" itemscope itemType="http://schema.org/BlogPosting">
   <div class="postShorten-wrap">
     
-      <a href="https://apylers.github.io/2015/06/welcome-to-tranquilpeak-0.4.7-beta/">
+      <a href="https://apylers.github.io/2015/06/welcome-to-the-new-tranquilpeak/">
         <div class="postShorten-thumbnailimg">
           <img alt="" itemprop="image" src="//d1u9biwaxjngwg.cloudfront.net/welcome-to-tranquilpeak/city-750.jpg"/>
         </div>
@@ -217,7 +256,7 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://apylers.github.io/2015/06/welcome-to-tranquilpeak-0.4.7-beta/">
+        <a class="link-unstyled" href="https://apylers.github.io/2015/06/welcome-to-the-new-tranquilpeak/">
           Welcome to Tranquilpeak 0.4.7-BETA
         </a>
       </h1>
@@ -254,7 +293,7 @@
         <p>Tranquilpeak is a gorgeous responsive theme for Hugo blog framework. It has many features and integrated services to improve user experience.</p>
       
       <p>
-        <a href="https://apylers.github.io/2015/06/welcome-to-tranquilpeak-0.4.7-beta/" class="postShorten-excerpt_link link">阅读全文</a>
+        <a href="https://apylers.github.io/2015/06/welcome-to-the-new-tranquilpeak/" class="postShorten-excerpt_link link">阅读全文</a>
         
       </p>
     </div>
@@ -269,7 +308,7 @@
         
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2020 Apylers. All Rights Reserved
+    &copy; 2020 Apylers. All Rights Reserved.
   </span>
 </footer>
 
@@ -279,7 +318,7 @@
     <div id="about">
   <div id="about-card">
     <div id="about-btn-close">
-      <i class="fa fa-remove"></i>
+      <i class="fas fa-remove"></i>
     </div>
     
       <img id="about-card-picture" src="https://apylers.github.io/favicon.png" alt="作者的图片" />
@@ -290,14 +329,14 @@
     
     
       <div id="about-card-job">
-        <i class="fa fa-briefcase"></i>
+        <i class="fas fa-briefcase"></i>
         <br/>
         I&rsquo;m a student!
       </div>
     
     
       <div id="about-card-location">
-        <i class="fa fa-map-marker"></i>
+        <i class="fas fa-map-marker"></i>
         <br/>
         China
       </div>
@@ -316,14 +355,14 @@
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.loli.net/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.loli.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/script-omeoitlhnsgntsj0zc2c9gc61uuwfhtz1uhjav7d5k47lo6rady8q0qygpc.min.js"></script>
+<script src="/js/script.min.js"></script>
 
 
 <script lang="javascript">

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>features on </title>
+    <title>features on 幸运小站</title>
     <link>https://apylers.github.io/categories/features/</link>
-    <description>Recent content in features on </description>
+    <description>Recent content in features on 幸运小站</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Thu, 28 May 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://apylers.github.io/categories/features/index.xml" rel="self" type="application/rss+xml" />
@@ -75,10 +76,10 @@
     
     <item>
       <title>中文測試</title>
-      <link>https://apylers.github.io/2013/10/chinese-test/</link>
+      <link>https://apylers.github.io/2013/10/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6/</link>
       <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://apylers.github.io/2013/10/chinese-test/</guid>
+      <guid>https://apylers.github.io/2013/10/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6/</guid>
       <description>&lt;p&gt;This is a chinese test post to show you how chinese is displayed.&lt;/p&gt;</description>
     </item>
     
@@ -93,10 +94,10 @@
     
     <item>
       <title>日本語テスト</title>
-      <link>https://apylers.github.io/2013/01/japanese-test/</link>
+      <link>https://apylers.github.io/2013/01/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88/</link>
       <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://apylers.github.io/2013/01/japanese-test/</guid>
+      <guid>https://apylers.github.io/2013/01/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88/</guid>
       <description>&lt;p&gt;This is a Japanese test post to show you how japanese is displayed.&lt;/p&gt;</description>
     </item>
     
