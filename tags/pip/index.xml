@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pip on 幸运小站</title>
+    <link>https://apylers.github.io/tags/pip/</link>
+    <description>Recent content in pip on 幸运小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://apylers.github.io/tags/pip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一条命令解决 pip 批量更新问题</title>
+      <link>https://apylers.github.io/2019/10/pip-upgrade-all/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://apylers.github.io/2019/10/pip-upgrade-all/</guid>
+      <description>&lt;p&gt;在用 pip 管理包时尤其头疼的便是看到有大量更新的时候无法一键升级，这里给出用一条命令解决的方式！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

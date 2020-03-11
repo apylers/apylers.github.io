@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPS on 幸运小站</title>
+    <link>https://apylers.github.io/tags/vps/</link>
+    <description>Recent content in VPS on 幸运小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Mon, 04 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://apylers.github.io/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用 Ubuntu 搭建一个 KMS 服务器</title>
+      <link>https://apylers.github.io/2019/11/ubuntu-kms/</link>
+      <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://apylers.github.io/2019/11/ubuntu-kms/</guid>
+      <description>&lt;p&gt;有时候新装的 Windows 系统会需要使用到 KMS 激活，这时打开激活界面会显示 &lt;code&gt;Windows 10 已使用你组织的激活服务激活&lt;/code&gt;。有人可能怀疑其中的安全性，为了消除这种担心，选择自己搭建一个 KMS 服务器不失为一种好的选择。废话不多说，以下开始！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WordPress 建站教程：VPS &#43; LNMP 快速建站</title>
+      <link>https://apylers.github.io/2019/04/wordpress-website/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://apylers.github.io/2019/04/wordpress-website/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;纯干货！本教程使用 VPS + LNMP 教你在 1~2h 内快速搭建 WordPress 网站。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>忘记密码 on 幸运小站</title>
+    <link>https://apylers.github.io/tags/%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/</link>
+    <description>Recent content in 忘记密码 on 幸运小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Thu, 02 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://apylers.github.io/tags/%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>忘记 WordPress 密码怎么办？</title>
+      <link>https://apylers.github.io/2019/05/wordpress-forget-password/</link>
+      <pubDate>Thu, 02 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://apylers.github.io/2019/05/wordpress-forget-password/</guid>
+      <description>&lt;p&gt;作为管理员，如果不小心忘记了自己的密码那将是十分尴尬的一件事，好在一般情况下通过找回密码即可解决，然而如果不巧，网站发不了邮件，那该怎么处理呢？&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

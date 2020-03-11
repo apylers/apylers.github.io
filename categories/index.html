@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
   <head>
     
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.67.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Apylers">
 <meta name="keywords" content=", development, next-gen">
 <meta name="description" content="Learning on the fly!">
@@ -52,8 +52,10 @@
     <link rel="canonical" href="https://apylers.github.io/categories/">
 
     
-    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.12.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@v3.5.7/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/atom-one-dark.min.css"/>
+    
     
     
     <link rel="stylesheet" href="/css/style.min.css" />
@@ -64,36 +66,6 @@
       
     
     
-
-<script
-    type="text/javascript"
-    async
-    src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
->
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [['$','$'], ['\\(','\\)']],
-            displayMath: [['$$','$$'], ['\[\[','\]\]']],
-            processEscapes: true,
-            processEnvironments: true,
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            TeX: { equationNumbers: { autoNumber: "AMS" },
-                extensions: ["AMSmath.js", "AMSsymbols.js"] }
-        }
-    });
-
-    MathJax.Hub.Queue(function() {
-        
-        
-        
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i = 0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-
   </head>
 
   <body>
@@ -105,20 +77,19 @@
   </div>
   
     
-      <a class="header-right-picture "
-         href="/#about">
+      <a class="header-right-icon open-algolia-search"
+         href="#search">
     
     
+      <i class="fas fa-search"></i>
     
-      
-        <img class="header-picture" src="https://apylers.github.io/favicon.png" alt="作者的图片" />
-      
     
     </a>
   
 </header>
 
       <nav id="sidebar" data-behavior="1">
+  <i id="btn-close-sidebar" class="fas fa-times btn-close-sidebar"></i>
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -135,7 +106,7 @@
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/">
+      <a class="sidebar-button-link" href="/">
     
       <i class="sidebar-button-icon fas fa-home"></i>
       
@@ -145,7 +116,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/categories">
+      <a class="sidebar-button-link" href="/categories">
     
       <i class="sidebar-button-icon fas fa-bookmark"></i>
       
@@ -155,7 +126,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/tags">
+      <a class="sidebar-button-link" href="/tags">
     
       <i class="sidebar-button-icon fas fa-tags"></i>
       
@@ -165,7 +136,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/archives">
+      <a class="sidebar-button-link" href="/archives">
     
       <i class="sidebar-button-icon fas fa-archive"></i>
       
@@ -179,7 +150,7 @@
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/apylers" target="_blank" rel="noopener">
+      <a class="sidebar-button-link" href="https://github.com/apylers" target="_blank" rel="noopener">
     
       <i class="sidebar-button-icon fab fa-github"></i>
       
@@ -189,7 +160,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="mailto://apylers@cyh.me" target="_blank" rel="noopener">
+      <a class="sidebar-button-link" href="mailto://apylers@cyh.me" target="_blank" rel="noopener">
     
       <i class="sidebar-button-icon fas fa-envelope"></i>
       
@@ -199,7 +170,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/#about">
+      <a class="sidebar-button-link" href="/#about">
     
       <i class="sidebar-button-icon fas fa-question"></i>
       
@@ -209,7 +180,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/index.xml">
+      <a class="sidebar-button-link" href="/index.xml">
     
       <i class="sidebar-button-icon fas fa-rss"></i>
       
@@ -229,10 +200,7 @@
       
 
       <div id="main" data-behavior="1"
-        class="
-               hasCoverMetaIn
-               ">
-
+        class="hasCoverMetaIn">
         <div id="categories-archives" class="main-content-wrap">
           <form id="filter-form" action="##">
             <input name="category" type="text" class="form-control input--xlarge"
@@ -245,392 +213,204 @@
           <section class="boxes">
             
               
-                <div>
-                  <a href="#posts-list-tranquilpeak" class="category-anchor" data-category="tranquilpeak">tranquilpeak</a>
-                </div>
-              
-                <div>
-                  <a href="#posts-list-features" class="category-anchor" data-category="features">features</a>
-                </div>
-              
-                <div>
-                  <a href="#posts-list-releases" class="category-anchor" data-category="releases">releases</a>
-                </div>
-              
-                <div>
-                  <a href="#posts-list-showcase" class="category-anchor" data-category="showcase">showcase</a>
-                </div>
-              
-            
-          </section>
-          <section class="boxes">
-            
-              
-              <div id="posts-list-tranquilpeak" class="archive box" data-category="tranquilpeak" style="display: block;">
+              <div id="posts-list-tutorials" class="archive box" data-category="tutorials" style="display: block;">
                 <h4 class="archive-title text-xlarge">
-                  <a class="link-unstyled" href="tranquilpeak">tranquilpeak (12)</a>
+                  <a class="link-unstyled" href="tutorials">tutorials (14)</a>
                 </h4>
                 <ul class="archive-posts">
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2013/01/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88/">
-                        日本語テスト
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/04/wordpress-website/">
+                        WordPress 建站教程：VPS &#43; LNMP 快速建站
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2013-01-02
+    2019-04-07
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2013/02/image-gallery-showcase/">
-                        Image gallery showcase
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/04/shadowsocks/">
+                        Shadowsocks 脚本一键安装并开启 BBR 加速
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2013-02-18
+    2019-04-15
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2013/10/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6/">
-                        中文測試
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/05/wordpress-email/">
+                        WordPress 配置发送邮件
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2013-10-02
+    2019-05-01
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2014/08/video-integrations-showcase/">
-                        Video integrations showcase
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/05/wordpress-forget-password/">
+                        忘记 WordPress 密码怎么办？
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2014-08-09
+    2019-05-02
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2014/08/hidden-pagination-showcase/">
-                        Hidden pagination showcase
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/06/v2ray/">
+                        V2Ray 搭建教程
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2014-08-15
+    2019-06-30
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2014/08/hidden-tag-section-showcase/">
-                        Hidden tag section showcase
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/07/windows-activate/">
+                        激活 Windows 10
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2014-08-16
+    2019-07-28
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2014/08/hidden-social-section-showcase/">
-                        Hidden social section showcase
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/10/pip-upgrade-all/">
+                        一条命令解决 pip 批量更新问题
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2014-08-17
+    2019-10-01
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2015/03/highlighted-code-showcase/">
-                        highlighted code showcase
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/10/nginx-upgrade/">
+                        Nginx 升级到最新 Stable 版本
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2015-03-23
+    2019-10-13
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2015/05/cover-image-showcase/">
-                        Cover image showcase
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/10/ubuntu-change-ssh-port/">
+                        Ubuntu 修改 SSH 端口
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2015-05-13
+    2019-10-13
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2015/05/elements-showcase/">
-                        Elements showcase
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/10/ubuntu-auto-completion/">
+                        Ubuntu 开启输入自动补全功能
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2015-05-28
+    2019-10-13
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2015/06/who-is-using-tranquilpeak-hugo-theme/">
-                        Who&#39;s using Tranquilpeak Hugo Theme
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/10/google-bbr/">
+                        Ubuntu 快速开启 Google BBR 方法
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2015-06-14
+    2019-10-13
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2015/06/welcome-to-the-new-tranquilpeak/">
-                        Welcome to Tranquilpeak 0.4.7-BETA
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/11/ubuntu-add-startup/">
+                        在 Ubuntu 中添加开机启动项的简易方式
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2015-06-15
-  
-</span>
-                    </li>
-                  
-                </ul>
-              </div>
-              
-              <div id="posts-list-features" class="archive box" data-category="features" style="display: block;">
-                <h4 class="archive-title text-xlarge">
-                  <a class="link-unstyled" href="features">features (10)</a>
-                </h4>
-                <ul class="archive-posts">
-                  
-                    <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2013/01/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88/">
-                        日本語テスト
-                      </a>
-                      <span class="archive-post-date"> - 
-  
-  
-  
-  
-    2013-01-02
+    2019-11-03
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2013/02/image-gallery-showcase/">
-                        Image gallery showcase
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/11/ubuntu-kms/">
+                        用 Ubuntu 搭建一个 KMS 服务器
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2013-02-18
+    2019-11-04
   
 </span>
                     </li>
                   
                     <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2013/10/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6/">
-                        中文測試
+                      <a class="archive-post-title" href="https://apylers.github.io/2019/11/ubuntu-transmission/">
+                        使用 transmission 搭建 BT 种子下载站
                       </a>
                       <span class="archive-post-date"> - 
   
   
   
   
-    2013-10-02
-  
-</span>
-                    </li>
-                  
-                    <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2014/08/video-integrations-showcase/">
-                        Video integrations showcase
-                      </a>
-                      <span class="archive-post-date"> - 
-  
-  
-  
-  
-    2014-08-09
-  
-</span>
-                    </li>
-                  
-                    <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2014/08/hidden-pagination-showcase/">
-                        Hidden pagination showcase
-                      </a>
-                      <span class="archive-post-date"> - 
-  
-  
-  
-  
-    2014-08-15
-  
-</span>
-                    </li>
-                  
-                    <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2014/08/hidden-tag-section-showcase/">
-                        Hidden tag section showcase
-                      </a>
-                      <span class="archive-post-date"> - 
-  
-  
-  
-  
-    2014-08-16
-  
-</span>
-                    </li>
-                  
-                    <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2014/08/hidden-social-section-showcase/">
-                        Hidden social section showcase
-                      </a>
-                      <span class="archive-post-date"> - 
-  
-  
-  
-  
-    2014-08-17
-  
-</span>
-                    </li>
-                  
-                    <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2015/03/highlighted-code-showcase/">
-                        highlighted code showcase
-                      </a>
-                      <span class="archive-post-date"> - 
-  
-  
-  
-  
-    2015-03-23
-  
-</span>
-                    </li>
-                  
-                    <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2015/05/cover-image-showcase/">
-                        Cover image showcase
-                      </a>
-                      <span class="archive-post-date"> - 
-  
-  
-  
-  
-    2015-05-13
-  
-</span>
-                    </li>
-                  
-                    <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2015/05/elements-showcase/">
-                        Elements showcase
-                      </a>
-                      <span class="archive-post-date"> - 
-  
-  
-  
-  
-    2015-05-28
-  
-</span>
-                    </li>
-                  
-                </ul>
-              </div>
-              
-              <div id="posts-list-releases" class="archive box" data-category="releases" style="display: block;">
-                <h4 class="archive-title text-xlarge">
-                  <a class="link-unstyled" href="releases">releases (1)</a>
-                </h4>
-                <ul class="archive-posts">
-                  
-                    <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2015/06/welcome-to-the-new-tranquilpeak/">
-                        Welcome to Tranquilpeak 0.4.7-BETA
-                      </a>
-                      <span class="archive-post-date"> - 
-  
-  
-  
-  
-    2015-06-15
-  
-</span>
-                    </li>
-                  
-                </ul>
-              </div>
-              
-              <div id="posts-list-showcase" class="archive box" data-category="showcase" style="display: block;">
-                <h4 class="archive-title text-xlarge">
-                  <a class="link-unstyled" href="showcase">showcase (1)</a>
-                </h4>
-                <ul class="archive-posts">
-                  
-                    <li class="archive-post">
-                      <a class="archive-post-title" href="https://apylers.github.io/2015/06/who-is-using-tranquilpeak-hugo-theme/">
-                        Who&#39;s using Tranquilpeak Hugo Theme
-                      </a>
-                      <span class="archive-post-date"> - 
-  
-  
-  
-  
-    2015-06-14
+    2019-11-24
   
 </span>
                     </li>
@@ -643,16 +423,17 @@
         </div>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2020 Apylers. All Rights Reserved.
+    &copy; 2020 Apylers - All Rights Reserved.
   </span>
 </footer>
 
       </div>
     </div>
+        
     <div id="about">
   <div id="about-card">
     <div id="about-btn-close">
-      <i class="fas fa-remove"></i>
+      <i class="fas fa-times"></i>
     </div>
     
       <img id="about-card-picture" src="https://apylers.github.io/favicon.png" alt="作者的图片" />
@@ -679,20 +460,441 @@
 </div>
 
     
-  
+  <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="close-button"><i class="fas fa-times"></i></span>
+        <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+          <span class="searchby-algolia-text text-color-light text-small">by</span>
+          <img class="searchby-algolia-logo" src="/search/Algolia.png">
+        </a>
+        <i class="search-icon fas fa-search"></i>
+        <form id="algolia-search-form">
+          <input type="text" id="algolia-search-input" name="search"
+            class="form-control input--large search-input" placeholder="搜索" />
+        </form>
+      </div>
+      <div class="modal-body">
+        <div class="no-result text-color-light text-center">没有找到文章</div>
+        <div class="results">
+          
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/11/ubuntu-transmission/">
+                    <img class="media-image" src="/cover/transmission.jpg"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/11/ubuntu-transmission/">
+                  <h3 class="media-heading">使用 transmission 搭建 BT 种子下载站</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-11-24
+                  </span>
+                </span>
+                <div class="media-content font-default">在网上寻找资源的时候时不时可能遇到一些种子链接，必须通过 BitTorrent 等工具才能下载，但由于国内的 ip 地址较少，而且一般使用种子分享的资源体积都比较巨大，直接使用本地下载耗费很多无用的时间。我们如果自己搭建一个能长时间运行的服务器来代替我们下载，不仅不占用自己电脑的空间，还能 24h 不间断下载，节约了大量时间空间成本。</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/11/ubuntu-kms/">
+                    <img class="media-image" src="/cover/KMS.png"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/11/ubuntu-kms/">
+                  <h3 class="media-heading">用 Ubuntu 搭建一个 KMS 服务器</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-11-04
+                  </span>
+                </span>
+                <div class="media-content font-default">有时候新装的 Windows 系统会需要使用到 KMS 激活，这时打开激活界面会显示 Windows 10 已使用你组织的激活服务激活。有人可能怀疑其中的安全性，为了消除这种担心，选择自己搭建一个 KMS 服务器不失为一种好的选择。废话不多说，以下开始！</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/11/ubuntu-add-startup/">
+                    <img class="media-image" src="/cover/startup-script.png"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/11/ubuntu-add-startup/">
+                  <h3 class="media-heading">在 Ubuntu 中添加开机启动项的简易方式</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-11-03
+                  </span>
+                </span>
+                <div class="media-content font-default">在使用服务器时，多次遇到需要添加开机启动项的情况，上网查了很多教程，基本上都是通过修改 rc.local 的方式来达成目的，但不知为何，有时按教程操作却不起作用。在这里介绍一种 100% 能成功的操作方式 —— 通过 crontab 实现！</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/10/nginx-upgrade/">
+                    <img class="media-image" src="/cover/Nginx.png"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/10/nginx-upgrade/">
+                  <h3 class="media-heading">Nginx 升级到最新 Stable 版本</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-10-13
+                  </span>
+                </span>
+                <div class="media-content font-default">Ubuntu 中直接安装的 Nginx 并非最新的 Stable 版本，在这里本教程参考 Nginx 官方教程 给出的方法，教大家如何升级。</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/10/ubuntu-change-ssh-port/">
+                    <img class="media-image" src="/cover/SSH.png"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/10/ubuntu-change-ssh-port/">
+                  <h3 class="media-heading">Ubuntu 修改 SSH 端口</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-10-13
+                  </span>
+                </span>
+                <div class="media-content font-default">Ubuntu 服务器 SSH 默认端口是 22，在公网下容易受到攻击，在这种情况更换 SSH 端口便是十分重要的，而更换方式也是十分简单。</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/10/ubuntu-auto-completion/">
+                    <img class="media-image" src="/cover/command-line.jpg"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/10/ubuntu-auto-completion/">
+                  <h3 class="media-heading">Ubuntu 开启输入自动补全功能</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-10-13
+                  </span>
+                </span>
+                <div class="media-content font-default">有时候不知什么原因，自己的 Ubuntu 系统或者刚重装的 VPS 没有开启自动补全， 在命令行下的输入效率便降低了很多很多，这里就告诉大家如何开启。</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/10/google-bbr/">
+                    <img class="media-image" src="/cover/Google-BBR.png"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/10/google-bbr/">
+                  <h3 class="media-heading">Ubuntu 快速开启 Google BBR 方法</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-10-13
+                  </span>
+                </span>
+                <div class="media-content font-default">Google BBR 是 Google 开源的拥塞控制算法， 开启 BBR 加速的 VPS，网速甚至有可能提升好几个数量级。</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/10/pip-upgrade-all/">
+                    <img class="media-image" src="/cover/pip-Linux.jpg"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/10/pip-upgrade-all/">
+                  <h3 class="media-heading">一条命令解决 pip 批量更新问题</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-10-01
+                  </span>
+                </span>
+                <div class="media-content font-default">在用 pip 管理包时尤其头疼的便是看到有大量更新的时候无法一键升级，这里给出用一条命令解决的方式！</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/07/windows-activate/">
+                    <img class="media-image" src="/cover/Windows-activation.jpg"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/07/windows-activate/">
+                  <h3 class="media-heading">激活 Windows 10</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-07-28
+                  </span>
+                </span>
+                <div class="media-content font-default">经常遇到重装 Windows 后发现自己的系统并未激活，这里提供一个简单有效的方式给大家。</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/06/v2ray/">
+                    <img class="media-image" src="/cover/V2Ray.png"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/06/v2ray/">
+                  <h3 class="media-heading">V2Ray 搭建教程</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-06-30
+                  </span>
+                </span>
+                <div class="media-content font-default">自从今年 6 月 1 日开始的大规模封禁，我的 Shadowsocks 也受到了严重的影响，为了解决这一问题，我开始着手寻找一个更安全更稳定的翻墙方式，这便是 V2Ray。经历多次安装失败后，这里总结出一套完整的、不易出错的教程，内容基于 V2Ray 官方网站以及白话文教程。</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/05/wordpress-forget-password/">
+                    <img class="media-image" src="/cover/password.gif"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/05/wordpress-forget-password/">
+                  <h3 class="media-heading">忘记 WordPress 密码怎么办？</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-05-02
+                  </span>
+                </span>
+                <div class="media-content font-default">作为管理员，如果不小心忘记了自己的密码那将是十分尴尬的一件事，好在一般情况下通过找回密码即可解决，然而如果不巧，网站发不了邮件，那该怎么处理呢？</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/05/wordpress-email/">
+                    <img class="media-image" src="/cover/Email.jpg"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/05/wordpress-email/">
+                  <h3 class="media-heading">WordPress 配置发送邮件</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-05-01
+                  </span>
+                </span>
+                <div class="media-content font-default">很多人可能发现，自己建的 WordPress 站点无法发送邮件，导致无法注册或者无法找回密码，困惑不已。实际上出现这种状况的原因是 WordPress 默认使用的是 PHP 中的 mail 函数发送邮件，但我们并没有对其进行配置，因此不能正常发送邮件。不过解决的方法也很简单，我们使用一个插件，通过第三方邮件商发邮件即可。</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/04/shadowsocks/">
+                    <img class="media-image" src="/cover/Shadowsocks.webp"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/04/shadowsocks/">
+                  <h3 class="media-heading">Shadowsocks 脚本一键安装并开启 BBR 加速</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-04-15
+                  </span>
+                </span>
+                <div class="media-content font-default">众所周知，在国内无论是想使用 Google 搜索还是上 YouTube 看视频又或者是使用 Twitter、Facebook 等社交平台简直是难上加难，在这里，仅介绍受众最为广泛的 Shadowsocks 搭建教程。</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+            <div class="media">
+              
+                <div class="media-right">
+                  <a class="link-unstyled hide-xs" href="https://apylers.github.io/2019/04/wordpress-website/">
+                    <img class="media-image" src="/cover/WordPress.jpg"/>
+                  </a>
+                </div>
+              
+              <div class="media-body">
+                <a class="link-unstyled" href="https://apylers.github.io/2019/04/wordpress-website/">
+                  <h3 class="media-heading">WordPress 建站教程：VPS &#43; LNMP 快速建站</h3>
+                </a>
+                <span class="media-meta">
+                  <span class="media-date text-small">
+                    2019-04-07
+                  </span>
+                </span>
+                <div class="media-content font-default">纯干货！本教程使用 VPS &#43; LNMP 教你在 1~2h 内快速搭建 WordPress 网站。</div>
+              </div>
+              <div style="clear:both;"></div>
+              <hr>
+            </div>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="results-count text-medium"
+          data-message-zero="没有找到文章"
+          data-message-one="找到 1 篇文章"
+          data-message-other="找到 {n} 篇文章">
+          共 14 篇文章
+        </p>
+      </div>
+    </div>
+  </div>
+
+
     
-      <div id="cover" style="background-image:url('https://apylers.github.io/images/cover.jpg');"></div>
+  
+    <div id="cover" style="background-image:url('https://apylers.github.io/background/%E6%9C%9D%E3%81%AE%E6%B5%B7%E6%B8%AF.jpg');"></div>
+  
+
+
     
-  
+<script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        messageStyle: "none",
+        tex2jax: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            displayMath: [["$$", "$$"], ["\[\[", "\]\]"]],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ["script", "noscript", "style", "textarea", "pre"],
+            TeX: {
+                equationNumbers: { autoNumber: "AMS" },
+                extensions: ["AMSmath.js", "AMSsymbols.js"]
+            }
+        }
+    });
+
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += " has-jax";
+        }
+    });
+</script>
 
 
-  </body>
-  
-<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <script src="https://cdnjs.loli.net/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.7.0/dist/highlightjs-line-numbers.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>hljs.initLineNumbersOnLoad({singleLine: true});</script>
+<style>
+     
+    td.hljs-ln-numbers {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
-<script src="https://cdnjs.loli.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #CCC;
+        vertical-align: top;
+        padding-right: 5px;
+
+         
+    }
+
+     
+    td.hljs-ln-code {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    table.hljs-ln tr {
+        background: inherit;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        hljs.configure({ classPrefix: "", useBR: false });
+        $("pre.code-highlight > code, pre > code").each(function(i, block) {
+            if (!$(this).hasClass("codeblock")) {
+                $(this).addClass("codeblock");
+            }
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
+
 
 
 <script src="/js/script.min.js"></script>
@@ -713,20 +915,18 @@ function updateMinWidth() {
 }
 </script>
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight > code, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
 
 
 
+    <script src="https://cdn.jsdelivr.net/gh/moment/moment@2.24.0/min/moment-with-locales.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+    <script>
+      var algoliaClient = algoliasearch('F2K8SP0PM5', '592bb860cd3e3437145dc2a761c2c5a7');
+      var algoliaIndex = algoliaClient.initIndex('Hugo');
+    </script>
 
 
+    
+  </body>
 </html>
+

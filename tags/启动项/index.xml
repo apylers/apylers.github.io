@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>启动项 on 幸运小站</title>
+    <link>https://apylers.github.io/tags/%E5%90%AF%E5%8A%A8%E9%A1%B9/</link>
+    <description>Recent content in 启动项 on 幸运小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Sun, 03 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://apylers.github.io/tags/%E5%90%AF%E5%8A%A8%E9%A1%B9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在 Ubuntu 中添加开机启动项的简易方式</title>
+      <link>https://apylers.github.io/2019/11/ubuntu-add-startup/</link>
+      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://apylers.github.io/2019/11/ubuntu-add-startup/</guid>
+      <description>&lt;p&gt;在使用服务器时，多次遇到需要添加开机启动项的情况，上网查了很多教程，基本上都是通过修改 &lt;code&gt;rc.local&lt;/code&gt; 的方式来达成目的，但不知为何，有时按教程操作却不起作用。在这里介绍一种 100% 能成功的操作方式 —— 通过 crontab 实现！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
