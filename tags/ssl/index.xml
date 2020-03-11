@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SSL on 幸运小站</title>
-    <link>https://apylers.github.io/tags/ssl/</link>
+    <link>https://cyh.me/tags/ssl/</link>
     <description>Recent content in SSL on 幸运小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://apylers.github.io/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cyh.me/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>WordPress 建站教程：VPS &#43; LNMP 快速建站</title>
-      <link>https://apylers.github.io/2019/04/wordpress-website/</link>
+      <link>https://cyh.me/2019/04/wordpress-website/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://apylers.github.io/2019/04/wordpress-website/</guid>
+      <guid>https://cyh.me/2019/04/wordpress-website/</guid>
       <description>&lt;p&gt;&lt;strong&gt;纯干货！本教程使用 VPS + LNMP 教你在 1~2h 内快速搭建 WordPress 网站。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     

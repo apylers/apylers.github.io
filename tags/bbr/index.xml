@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BBR on 幸运小站</title>
-    <link>https://apylers.github.io/tags/bbr/</link>
+    <link>https://cyh.me/tags/bbr/</link>
     <description>Recent content in BBR on 幸运小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Sun, 13 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://apylers.github.io/tags/bbr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cyh.me/tags/bbr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ubuntu 快速开启 Google BBR 方法</title>
-      <link>https://apylers.github.io/2019/10/google-bbr/</link>
+      <link>https://cyh.me/2019/10/google-bbr/</link>
       <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://apylers.github.io/2019/10/google-bbr/</guid>
+      <guid>https://cyh.me/2019/10/google-bbr/</guid>
       <description>&lt;p&gt;Google BBR 是 Google 开源的拥塞控制算法， 开启 BBR 加速的 VPS，网速甚至有可能提升好几个数量级。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Shadowsocks 脚本一键安装并开启 BBR 加速</title>
-      <link>https://apylers.github.io/2019/04/shadowsocks/</link>
+      <link>https://cyh.me/2019/04/shadowsocks/</link>
       <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://apylers.github.io/2019/04/shadowsocks/</guid>
+      <guid>https://cyh.me/2019/04/shadowsocks/</guid>
       <description>&lt;p&gt;众所周知，在国内无论是想使用 Google 搜索还是上 YouTube 看视频又或者是使用 Twitter、Facebook 等社交平台简直是难上加难，在这里，仅介绍受众最为广泛的 Shadowsocks 搭建教程。&lt;/p&gt;</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>邮件 on 幸运小站</title>
-    <link>https://apylers.github.io/tags/%E9%82%AE%E4%BB%B6/</link>
+    <link>https://cyh.me/tags/%E9%82%AE%E4%BB%B6/</link>
     <description>Recent content in 邮件 on 幸运小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://apylers.github.io/tags/%E9%82%AE%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cyh.me/tags/%E9%82%AE%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>WordPress 配置发送邮件</title>
-      <link>https://apylers.github.io/2019/05/wordpress-email/</link>
+      <link>https://cyh.me/2019/05/wordpress-email/</link>
       <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://apylers.github.io/2019/05/wordpress-email/</guid>
+      <guid>https://cyh.me/2019/05/wordpress-email/</guid>
       <description>&lt;p&gt;很多人可能发现，自己建的 WordPress 站点无法发送邮件，导致无法注册或者无法找回密码，困惑不已。实际上出现这种状况的原因是 WordPress 默认使用的是 PHP 中的 mail 函数发送邮件，但我们并没有对其进行配置，因此不能正常发送邮件。不过解决的方法也很简单，我们使用一个插件，通过第三方邮件商发邮件即可。&lt;/p&gt;</description>
     </item>
     

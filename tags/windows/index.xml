@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on 幸运小站</title>
-    <link>https://apylers.github.io/tags/windows/</link>
+    <link>https://cyh.me/tags/windows/</link>
     <description>Recent content in Windows on 幸运小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Mon, 04 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://apylers.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cyh.me/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>用 Ubuntu 搭建一个 KMS 服务器</title>
-      <link>https://apylers.github.io/2019/11/ubuntu-kms/</link>
+      <link>https://cyh.me/2019/11/ubuntu-kms/</link>
       <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://apylers.github.io/2019/11/ubuntu-kms/</guid>
+      <guid>https://cyh.me/2019/11/ubuntu-kms/</guid>
       <description>&lt;p&gt;有时候新装的 Windows 系统会需要使用到 KMS 激活，这时打开激活界面会显示 &lt;code&gt;Windows 10 已使用你组织的激活服务激活&lt;/code&gt;。有人可能怀疑其中的安全性，为了消除这种担心，选择自己搭建一个 KMS 服务器不失为一种好的选择。废话不多说，以下开始！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>激活 Windows 10</title>
-      <link>https://apylers.github.io/2019/07/windows-activate/</link>
+      <link>https://cyh.me/2019/07/windows-activate/</link>
       <pubDate>Sun, 28 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://apylers.github.io/2019/07/windows-activate/</guid>
+      <guid>https://cyh.me/2019/07/windows-activate/</guid>
       <description>&lt;p&gt;经常遇到重装 Windows 后发现自己的系统并未激活，这里提供一个简单有效的方式给大家。&lt;/p&gt;</description>
     </item>
     
