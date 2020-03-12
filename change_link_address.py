@@ -1,7 +1,7 @@
 import os
 import re
 
-exclude_file_list = [r'.gitignore', r'change_link_address.py', r'CNAME']
+exclude_file_list = [r'.gitignore', r'change_link_address.py', r'CNAME', r'favicon.png']
 exclude_dir_list = [r'.git', r'.idea', r'background', r'cover', r'icon', r'img', r'search']
 
 def replace_with_jsdeliver(file_path):
