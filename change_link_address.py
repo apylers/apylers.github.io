@@ -1,16 +1,16 @@
 import os
 import re
 
-exclude_file_list = [r'.gitignore', r'change_link_address.py', r'CNAME', r'favicon.png']
-exclude_dir_list = [r'.git', r'.idea', r'background', r'cover', r'img', r'search']
+exclude_file_list = [r'.gitignore', r'change_link_address.py', r'CNAME']
+exclude_dir_list = [r'.git', r'.idea', r'background', r'cover', r'icon', r'img', r'search']
 
 def replace_with_jsdeliver(file_path):
     with open(file_path, "r") as f:
         content = f.read()
-        new_content = re.sub(r"https://cyh.me/((?:background|cover|img|search|css|js))",
+        new_content = re.sub(r"https://cyh.me/((?:background|cover|icon|img|search|css|js))",
                              lambda x: "https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/" + x.group(1),
                              content)
-        new_content = re.sub(r"((?:'|\"))/((?:background|cover|img|search|css|js))",
+        new_content = re.sub(r"((?:'|\"))/((?:background|cover|icon|img|search|css|js))",
                              lambda x: x.group(
                                  1) + "https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/" + x.group(2),
                              new_content)

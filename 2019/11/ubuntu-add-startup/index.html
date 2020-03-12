@@ -60,13 +60,13 @@
 
 
 
-  <meta property="og:image" content="https://cyh.me/favicon.png">
-  <meta property="twitter:image" content="https://cyh.me/favicon.png">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/icon/favicon.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/icon/favicon.png">
 
 
     <title>在 Ubuntu 中添加开机启动项的简易方式</title>
 
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/icon/favicon.png">
     
 
     
@@ -125,7 +125,7 @@
     
       <div class="sidebar-profile">
         <a href="/">
-          <img class="sidebar-profile-picture" src="https://cyh.me/favicon.png" alt="作者的图片" />
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/icon/favicon.png" alt="作者的图片" />
         </a>
         <h4 class="sidebar-profile-name">Apylers</h4>
         
@@ -276,9 +276,12 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
+              
+              
+              
               <p>在使用服务器时，多次遇到需要添加开机启动项的情况，上网查了很多教程，基本上都是通过修改 <code>rc.local</code> 的方式来达成目的，但不知为何，有时按教程操作却不起作用。在这里介绍一种 100% 能成功的操作方式 —— 通过 crontab 实现！</p>
 <p>提到 crontab ，最先想到的应该是它能用于定时执行某个脚本或者命令，但实际上可以通过 <code>@</code> 代替一些常用操作，参考：<a href="http://man7.org/linux/man-pages/man5/crontab.5.html#EXTENSIONS">crontab 使用手册</a>，不愿意看英文的小伙伴可以参考以下表格：</p>
-<table>
+<div class='scrollable'><table>
 <thead>
 <tr>
 <th align="center">操作</th>
@@ -293,7 +296,7 @@
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>@yearly</code> / <code>@annually</code></td>
+<td align="center"><code>@yearly / @annually</code></td>
 <td align="center">每年运行一次</td>
 <td align="center"><code>&quot;0 0 1 1 *&quot;</code></td>
 </tr>
@@ -318,7 +321,7 @@
 <td align="center"><code>&quot;0 * * * *&quot;</code></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>据此，即可轻松添加开机启动项：</p>
 <pre><code class="language-shell">$ crontab -e
 </code></pre>
@@ -485,7 +488,7 @@
       <i class="fas fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="https://cyh.me/favicon.png" alt="作者的图片" />
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/icon/favicon.png" alt="作者的图片" />
     
     <h4 id="about-card-name">Apylers</h4>
     

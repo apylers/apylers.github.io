@@ -1074,7 +1074,11 @@
      * @returns {void}
      */
     showSearchModal: function() {
-      this.$searchModal.fadeIn();
+      this.$searchModal.addClass('show processing');
+      setTimeout(function() {
+        $('#algolia-search-modal').removeClass('processing');
+      }, 1);
+      //this.$searchModal.fadeIn(500);
     },
 
     /**
@@ -1082,7 +1086,11 @@
      * @returns {void}
      */
     hideSearchModal: function() {
-      this.$searchModal.fadeOut();
+      this.$searchModal.addClass('processing');
+      setTimeout(function() {
+        $('#algolia-search-modal').removeClass('show processing');
+      }, 499);
+      //this.$searchModal.fadeOut();
     },
 
     /**
@@ -1113,7 +1121,11 @@
      */
     showOverlay: function() {
       $('body').append('<div class="overlay"></div>');
-      $('.overlay').fadeIn();
+      setTimeout(function() {
+        $('.overlay').addClass("show");
+      }, 1);
+
+      //$('.overlay').fadeIn();
       $('body').css('overflow', 'hidden');
     },
 
@@ -1122,10 +1134,17 @@
      * @returns {void}
      */
     hideOverlay: function() {
-      $('.overlay').fadeOut(function() {
-        $(this).remove();
-        $('body').css('overflow', 'auto');
-      });
+      $('.overlay').removeClass('show');
+      setTimeout(function() {
+        $('.overlay').remove();
+      }, 499);
+      $('body').css('overflow', 'auto');
+
+
+      // $('.overlay').fadeOut(function() {
+      //   $(this).remove();
+      //   $('body').css('overflow', 'auto');
+      // });
     }
   };
 
