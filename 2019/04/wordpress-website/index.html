@@ -56,19 +56,19 @@
 
 
 
-  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/WordPress.jpg">
-  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/WordPress.jpg">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/WordPress.jpg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/WordPress.jpg">
 
 
 
 
-  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/icon/favicon.png">
-  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/icon/favicon.png">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/icon/favicon.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/icon/favicon.png">
 
 
     <title>WordPress 建站教程：VPS &#43; LNMP 快速建站</title>
 
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/icon/favicon.png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/icon/favicon.png">
     
 
     
@@ -84,7 +84,7 @@
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/css/style.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/css/style.min.css" />
     
     
 
@@ -129,7 +129,7 @@
     
       <div class="sidebar-profile">
         <a href="/">
-          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/icon/favicon.png" alt="作者的图片" />
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/icon/favicon.png" alt="作者的图片" />
         </a>
         <h4 class="sidebar-profile-name">Apylers</h4>
         
@@ -234,7 +234,7 @@
 
       
   <div class="post-header-cover text-center post-header-cover--partial"
-       style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/WordPress.jpg')"
+       style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/WordPress.jpg')"
        data-behavior="4">
     
   </div>
@@ -340,7 +340,7 @@ passwd: password updated successfully
 <p>CDN 加速又是什么？在用户访问网站时，需要与服务器建立连接，如果服务器就在身边，那么访问速度自然能大大加快，CDN 加速便是为了实现这一点。使用后，我们的服务器就可以把网站内容缓存在 CDN 节点中，由此便能加快访问速度，此外由于使用了 CDN 节点，我们的服务器 ip 地址也会被隐藏，让网站更加安全。</p>
 <p>我推荐使用 <a href="https://www.cloudflare.com/">Cloudflare</a> 的解析服务。它提供付费版的服务，但我们实际上使用免费的就已经足够了。另外 Cloudflare 还提供免费的 CDN 加速。还有一点，Cloudflare 提供免费的 SSL 证书，省去自己操作的困难，同时也可以进一步加强网站的安全性。</p>
 <p>打开 <a href="https://www.cloudflare.com/">Cloudflare</a> 注册后进入<a href="https://dash.cloudflare.com/">控制面板</a>，添加域名，选择 FREE 套餐就可以了。之后会自动扫描你的域名的 DNS 地址，并提供 Cloudflare 自己的 Nameservers，如果没有看到提供的地址，可以回到控制面板，发现刚刚添加的域名已经出现了，点击进入，在最上方选择 DNS，然后向下寻找 <strong>Cloudflare Nameservers</strong>，记住两个 <strong>Value</strong> 值。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/img/wordpress-website/Cloudflare-Nameservers.png" alt="img"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/img/wordpress-website/Cloudflare-Nameservers.png" alt="img"></p>
 <p>接下来进入自己的域名管理界面，把域名的 Nameservers 修改成上面给出的两个。官方称等待修改完全生效可能需要长达 48h，但根据测试一般而言 10min 以内就已经生效了。</p>
 <p>回到 Cloudflare 控制面板的 DNS 界面，填写域名和 ip 地址，如果需要开启 CDN 服务则需要将右侧的云点亮。至此，DNS 配置结束！</p>
 <h3 id="23-检查解析结果">2.3 检查解析结果</h3>
@@ -430,7 +430,7 @@ PHP-FPM: OK
 Install lnmp V1.6 completed! enjoy it.
 </code></pre>
 <p>这个时候在浏览器中输入服务器 ip 地址，可以看到 LNMP 安装成功的欢迎界面：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/img/wordpress-website/LNMP-default.png" alt="img"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/img/wordpress-website/LNMP-default.png" alt="img"></p>
 <h3 id="32-添加域名">3.2 添加域名</h3>
 <p>接下来一步是将自己的域名添加到 LNMP 中，为网站的正式上线作铺垫。</p>
 <pre><code class="language-shell">$ lnmp vhost add
@@ -646,7 +646,7 @@ $ chown -R www:www /home/wwwroot/*/*
       <i class="fas fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/icon/favicon.png" alt="作者的图片" />
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/icon/favicon.png" alt="作者的图片" />
     
     <h4 id="about-card-name">Apylers</h4>
     
@@ -676,7 +676,7 @@ $ chown -R www:www /home/wwwroot/*/*
         <span class="close-button"><i class="fas fa-times"></i></span>
         <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
           <span class="searchby-algolia-text text-color-light text-small">by</span>
-          <img class="searchby-algolia-logo" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/search/Algolia.png">
+          <img class="searchby-algolia-logo" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/search/Algolia.png">
         </a>
         <i class="search-icon fas fa-search"></i>
         <form id="algolia-search-form">
@@ -693,7 +693,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/11/ubuntu-transmission/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/transmission.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/transmission.jpg"/>
                   </a>
                 </div>
               
@@ -716,7 +716,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/11/ubuntu-kms/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/KMS.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/KMS.png"/>
                   </a>
                 </div>
               
@@ -739,7 +739,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/11/ubuntu-add-startup/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/startup-script.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/startup-script.png"/>
                   </a>
                 </div>
               
@@ -762,7 +762,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/nginx-upgrade/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/Nginx.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/Nginx.png"/>
                   </a>
                 </div>
               
@@ -785,7 +785,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/ubuntu-change-ssh-port/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/SSH.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/SSH.png"/>
                   </a>
                 </div>
               
@@ -808,7 +808,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/ubuntu-auto-completion/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/command-line.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/command-line.jpg"/>
                   </a>
                 </div>
               
@@ -831,7 +831,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/google-bbr/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/Google-BBR.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/Google-BBR.png"/>
                   </a>
                 </div>
               
@@ -854,7 +854,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/pip-upgrade-all/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/pip-Linux.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/pip-Linux.jpg"/>
                   </a>
                 </div>
               
@@ -877,7 +877,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/07/windows-activate/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/Windows-activation.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/Windows-activation.jpg"/>
                   </a>
                 </div>
               
@@ -900,7 +900,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/06/v2ray/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/V2Ray.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/V2Ray.png"/>
                   </a>
                 </div>
               
@@ -923,7 +923,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/05/wordpress-forget-password/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/password.gif"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/password.gif"/>
                   </a>
                 </div>
               
@@ -946,7 +946,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/05/wordpress-email/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/Email.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/Email.jpg"/>
                   </a>
                 </div>
               
@@ -969,7 +969,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/04/shadowsocks/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/Shadowsocks.webp"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/Shadowsocks.webp"/>
                   </a>
                 </div>
               
@@ -992,7 +992,7 @@ $ chown -R www:www /home/wwwroot/*/*
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/04/wordpress-website/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/cover/WordPress.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/WordPress.jpg"/>
                   </a>
                 </div>
               
@@ -1027,7 +1027,7 @@ $ chown -R www:www /home/wwwroot/*/*
 
     
   
-    <div id="cover" style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/background/%E6%9C%9D%E3%81%AE%E6%B5%B7%E6%B8%AF.jpg');"></div>
+    <div id="cover" style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/background/%E6%9C%9D%E3%81%AE%E6%B5%B7%E6%B8%AF.jpg');"></div>
   
 
 
@@ -1156,7 +1156,7 @@ $ chown -R www:www /home/wwwroot/*/*
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@master/js/script.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/js/script.min.js"></script>
 
 
 <script lang="javascript">
