@@ -11,7 +11,6 @@ html {
   tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
-  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -294,7 +293,6 @@ pre.code-highlight > code {
       padding: 0 30px 0 15px; } }
 
 #blog {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -1934,7 +1932,7 @@ a.fancybox {
 .modal {
   width: 100%;
   height: 100%;
-  max-width: 750px;
+  max-width: 855px;
   box-sizing: border-box;
   position: relative;
   margin: 0 auto;
@@ -1980,9 +1978,7 @@ a.fancybox {
 
 @media only screen and (min-width: 855px) {
   .modal-container {
-    padding: 50px 0;
-    left: 50%;
-    transform: translateX(-50%); }
+    padding: 50px 0; }
   .modal {
     border-radius: 5px; } }
 
@@ -2151,7 +2147,7 @@ a.fancybox {
   background-repeat: no-repeat;
   background-color: white;
   width: 100%;
-  padding: calc(55px + 1px + 30px) 0 30px 0;
+  padding-top: calc(55px + 1px);
   height: 100%;
   z-index: 15;
   transition: transform .25s ease-in-out;
@@ -2186,7 +2182,7 @@ a.fancybox {
           background-color: white; }
 
 .post-header-cover.post-header-cover--partial {
-  height: calc(60% + 55px + 1px); }
+  height: 500px; }
 
 .post-header-cover-caption {
   margin: 5px 0 50px 0; }
@@ -2284,7 +2280,8 @@ a.fancybox {
 
 .postShorten-group .postShorten {
   margin-top: 15px;
-  border-bottom: 1px solid #eef2f8; }
+  border-bottom: 1px solid #eef2f8;
+  padding-bottom: 14px; }
 
 .postShorten {
   position: relative;
@@ -2360,6 +2357,8 @@ a.fancybox {
   .postShorten.postShorten--thumbnailimg-right .postShorten-wrap {
     float: left;
     width: calc(100% - 200px - 20px); }
+  .postShorten.postShorten--thumbnailimg-right .postShorten-thumbnailimg-wrap:after {
+    content: none; }
   .postShorten.postShorten--thumbnailimg-left .postShorten-thumbnailimg {
     float: left;
     margin: 5px 15px 30px 0; }
@@ -2422,8 +2421,11 @@ a.fancybox {
       display: block;
       width: 100%;
       padding: 10px 0 10px 0; }
-      .share-options-bar .share-options .share-option .share-option-btn .fa {
-        margin-right: 15px; }
+      .share-options-bar .share-options .share-option .share-option-btn .share-option-icon {
+        font-size: 2rem;
+        margin-right: 5px; }
+    .share-options-bar .share-options .share-option :after {
+      content: none; }
 
 #btn-close-shareoptions {
   position: absolute;
@@ -2756,8 +2758,8 @@ a.tag--small,
 #algolia-search-modal {
   display: none;
   opacity: 0;
-  -webkit-transition: opacity 0.499s;
-  transition: opacity 0.499s; }
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
   #algolia-search-modal.show {
     display: block;
     opacity: 1; }
@@ -2789,8 +2791,9 @@ a.tag--small,
     color: #5d686f; }
   #algolia-search-modal .searchby-algolia {
     position: absolute;
-    top: 15px;
-    right: 45px; }
+    bottom: 5px;
+    right: 15px;
+    width: 40px; }
     #algolia-search-modal .searchby-algolia:after {
       content: none; }
   #algolia-search-modal .searchby-algolia-text {

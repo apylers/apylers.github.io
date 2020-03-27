@@ -49,7 +49,7 @@
       // the about card fade in and the blog fade out
       setTimeout(function() {
         self.dropAboutCard();
-      }, 300);
+      }, 500);
     },
 
     /**
@@ -76,23 +76,17 @@
      */
     dropAboutCard: function() {
       var self = this;
-      var aboutCardHeight = self.$aboutCard.innerHeight();
+      var aboutCardHeight = self.$aboutCard.innerHeight() + 30;
       // default offset from top
-      var offsetTop = ($(window).height() / 2) - (aboutCardHeight / 2) + aboutCardHeight;
+      var offsetTop = ($(window).height() - aboutCardHeight) / 2;
       // if card is longer than the window
       // scroll is enable
       // and re-define offsetTop
-      if (aboutCardHeight + 30 > $(window).height()) {
-        offsetTop = aboutCardHeight;
+      if (aboutCardHeight > $(window).height()) {
+        offsetTop = 0;
       }
-      self.$aboutCard
-        .css('top', '0px')
-        .css('top', '-' + aboutCardHeight + 'px')
-        .show(500, function() {
-          self.$aboutCard.animate({
-            top: '+=' + offsetTop + 'px'
-          });
-        });
+      self.$aboutCard.css('top', '-' + aboutCardHeight + 'px').css('transition', 'top 0.5s').css('top', offsetTop);
+
     },
 
     /**
@@ -101,18 +95,14 @@
      */
     liftAboutCard: function() {
       var self = this;
-      var aboutCardHeight = self.$aboutCard.innerHeight();
-      // default offset from top
-      var offsetTop = ($(window).height() / 2) - (aboutCardHeight / 2) + aboutCardHeight;
-      if (aboutCardHeight + 30 > $(window).height()) {
-        offsetTop = aboutCardHeight;
-      }
-      self.$aboutCard.animate({
-        top: '-=' + offsetTop + 'px'
-      }, 500, function() {
-        self.$aboutCard.hide();
-        self.$aboutCard.removeAttr('style');
-      });
+      var aboutCardHeight = self.$aboutCard.innerHeight() + 30;
+      self.$aboutCard.css('top', '-' + aboutCardHeight + 'px');
+      setTimeout(
+        function() {
+          $('#about-card').css('transition', '').css('top', '')
+        },
+        500
+      );
     }
   };
 
@@ -506,7 +496,7 @@
   });
 })(jQuery);
 ;(function($) {
-  'use strict';
+  "use strict";
 
   // Run fancybox feature
 
@@ -515,16 +505,25 @@
      * Configure and run Fancybox plugin
      * @returns {void}
      */
-    function fancyFox() {
+    function fancyBox() {
       var arrows = true;
       var thumbs = null;
-
       var customSettings = {
+        // Close existing modals
+        // Set this to false if you do not need to stack multiple instances
+        closeExisting: false,
+
         // Enable infinite gallery navigation
         loop: true,
 
         // Horizontal space between slides
         gutter: 50,
+
+        // Enable keyboard navigation
+        keyboard: true,
+
+        // Should allow caption to overlap the content
+        preventCaptionOverlap: true,
 
         // Should display navigation arrows at the screen edges
         arrows: true,
@@ -542,11 +541,27 @@
         // If "auto" - will be automatically hidden if "smallBtn" is enabled
         toolbar: false,
 
+        // What buttons should appear in the top right corner.
+        // Buttons will be created using templates from `btnTpl` option
+        // and they will be placed into toolbar (class="fancybox-toolbar"` element)
+        buttons: [
+          "zoom",
+          //"share",
+          "slideShow",
+          //"fullScreen",
+          //"download",
+          "thumbs",
+          "close"
+        ],
+
         // Detect "idle" time in seconds
         idleTime: 3,
 
         // Disable right-click and use simple image protection for images
-        protect: true,
+        protect: false,
+
+        // Shortcut to make content "modal" - disable keyboard navigtion, hide buttons, etc
+        modal: false,
 
         image: {
           // Wait for images to load before displaying
@@ -555,6 +570,20 @@
           //           requires predefined image dimensions (`data-width` and `data-height` attributes)
           preload: false
         },
+
+        ajax: {
+          // Object containing settings for ajax request
+          settings: {
+            // This helps to indicate that request comes from the modal
+            // Feel free to change naming
+            data: {
+              fancybox: true
+            }
+          }
+        },
+
+        // Default content type if cannot be detected automatically
+        defaultType: "image",
 
         // Open/close animation type
         // Possible values:
@@ -566,7 +595,11 @@
         animationEffect: "zoom",
 
         // Duration in ms for open/close animation
-        animationDuration: 400,
+        animationDuration: 500,
+
+        // Should image change opacity while zooming
+        // If opacity is "auto", then opacity will be changed if image and thumbnail have different aspect ratios
+        zoomOpacity: "auto",
 
         // Transition effect between slides
         //
@@ -579,16 +612,229 @@
         //   "zoom-in-out'
         //   "rotate'
         //
-        transitionEffect: "slide",
+        transitionEffect: "fade",
 
         // Duration in ms for transition animation
-        transitionDuration: 400,
+        transitionDuration: 500,
+
+        // Custom CSS class for slide element
+        slideClass: "",
+
+        // Custom CSS class for layout
+        baseClass: "",
+
+        // Container is injected into this element
+        parentEl: "body",
+
+        // Hide browser vertical scrollbars; use at your own risk
+        hideScrollbar: true,
+
+        // Focus handling
+        // ==============
+
+        // Try to focus on the first focusable element after opening
+        autoFocus: true,
+
+        // Put focus back to active element after closing
+        backFocus: true,
+
+        // Do not let user to focus on element outside modal content
+        trapFocus: true,
+
+        // Module specific options
+        // =======================
+
+        fullScreen: {
+          autoStart: false
+        },
+
+        // Set `touch: false` to disable panning/swiping
+        touch: false,
+
+        // Hash value when initializing manually,
+        // set `false` to disable hash change
+        hash: null,
+
+        // Customize or add new media types
+        // Example:
+        /*
+          media : {
+            youtube : {
+              params : {
+                autoplay : 0
+              }
+            }
+          }
+        */
+        media: {},
+
+        slideShow: {
+          autoStart: false,
+          speed: 3000
+        },
+
+        thumbs: {
+          autoStart: false, // Display thumbnails on opening
+          hideOnClose: true, // Hide thumbnail grid when closing animation starts
+          parentEl: ".fancybox-container", // Container is injected into this element
+          axis: "y" // Vertical (y) or horizontal (x) scrolling
+        },
+
+        // Use mousewheel to navigate gallery
+        // If 'auto' - enabled for images only
+        wheel: "auto",
+
+        // Callbacks
+        //==========
+
+        // See Documentation/API/Events for more information
+        // Example:
+        /*
+          afterShow: function( instance, current ) {
+            console.info( 'Clicked element:' );
+            console.info( current.opts.$orig );
+          }
+        */
+
+        onInit: $.noop, // When instance has been initialized
+
+        beforeLoad: $.noop, // Before the content of a slide is being loaded
+        afterLoad: $.noop, // When the content of a slide is done loading
+
+        beforeShow: function () {
+          function getScrollWidth() {
+            var noScroll, scroll, oDiv = document.createElement("DIV");
+            oDiv.style.cssText = "position:absolute; top:-1000px; width:100px; height:100px; overflow:hidden;";
+            noScroll = document.body.appendChild(oDiv).clientWidth;
+            oDiv.style.overflowY = "scroll";
+            scroll = oDiv.clientWidth;
+            document.body.removeChild(oDiv);
+            return noScroll-scroll;
+          }
+          var scrollbarWidth = getScrollWidth();
+
+          var body = $('body');
+          body.css('transition', 'none');
+          body.css('width', 'calc(100% - ' + scrollbarWidth + 'px)');
+          body.css('border-right', scrollbarWidth + 'px solid white');
+
+          var header = $('#header');
+          header.css('transition', 'none');
+          header.css('width', 'calc(100% - ' + scrollbarWidth + 'px)');
+          header.addClass('compensate-for-scrollbar');
+
+          var bottom = $('#bottom-bar');
+          bottom.css('transition', 'none');
+          bottom.css('width', 'calc(100% - 15px * 2 - ' + scrollbarWidth + 'px)');
+          bottom.addClass('compensate-for-scrollbar');
+
+          var toc = $('.toc');
+          toc.css('transition', 'none');
+          toc.css('right', 'calc((100% - 750px)/ 2 - 200px - 15px + ' + scrollbarWidth + 'px / 2)');
+
+        }, // Before open animation starts
+        afterShow: $.noop, // When content is done loading and animating
+
+        beforeClose: $.noop, // Before the instance attempts to close. Return false to cancel the close.
+        afterClose: function () {
+          $('body').css('border-right', '');
+
+          var marginElements = $('#header, #bottom-bar, body');
+
+          marginElements.removeClass('compensate-for-scrollbar');
+          marginElements.css('width', '');
+          setTimeout(function () {
+            marginElements.css('transition', '');
+          }, 0);
+
+          var toc = $('.toc');
+          toc.css('right', '');
+          setTimeout(function () {
+            toc.css('transition', '');
+          }, 0);
+        }, // After instance has been closed
+
+        onActivate: $.noop, // When instance is brought to front
+        onDeactivate: $.noop, // When other instance has been activated
+
+        // Interaction
+        // ===========
+
+        // Use options below to customize taken action when user clicks or double clicks on the fancyBox area,
+        // each option can be string or method that returns value.
+        //
+        // Possible values:
+        //   "close"           - close instance
+        //   "next"            - move to next gallery item
+        //   "nextOrClose"     - move to next gallery item or close if gallery has only one item
+        //   "toggleControls"  - show/hide controls
+        //   "zoom"            - zoom image (if loaded)
+        //   false             - do nothing
+
+        // Clicked on the content
+        clickContent: function(current, event) {
+          return current.type === "image" ? "zoom" : false;
+        },
+
+        // Clicked on the slide
+        clickSlide: "close",
+
+        // Clicked on the background (backdrop) element;
+        // if you have not changed the layout, then most likely you need to use `clickSlide` option
+        clickOutside: "close",
+
+        // Same as previous two, but for double click
+        dblclickContent: false,
+        dblclickSlide: false,
+        dblclickOutside: false,
+
+        // Custom options when mobile device is detected
+        // =============================================
+
+        mobile: {
+          preventCaptionOverlap: false,
+          idleTime: false,
+          clickContent: "close",
+          clickSlide: "close",
+          dblclickContent: function(current, event) {
+            return current.type === "image" ? "zoom" : false;
+          },
+          dblclickSlide: function(current, event) {
+            return current.type === "image" ? "zoom" : false;
+          }
+        },
 
         // Internationalization
         // ====================
 
         lang: "cn",
         i18n: {
+          en: {
+            CLOSE: "Close",
+            NEXT: "Next",
+            PREV: "Previous",
+            ERROR: "The requested content cannot be loaded. <br/> Please try again later.",
+            PLAY_START: "Start slideshow",
+            PLAY_STOP: "Pause slideshow",
+            FULL_SCREEN: "Full screen",
+            THUMBS: "Thumbnails",
+            DOWNLOAD: "Download",
+            SHARE: "Share",
+            ZOOM: "Zoom"
+          },
+          de: {
+            CLOSE: "Schliessen",
+            NEXT: "Weiter",
+            PREV: "Zurück",
+            ERROR: "Die angeforderten Daten konnten nicht geladen werden. <br/> Bitte versuchen Sie es später nochmal.",
+            PLAY_START: "Diaschau starten",
+            PLAY_STOP: "Diaschau beenden",
+            FULL_SCREEN: "Vollbild",
+            THUMBS: "Vorschaubilder",
+            DOWNLOAD: "Herunterladen",
+            SHARE: "Teilen",
+            ZOOM: "Maßstab"
+          },
           cn: {
             CLOSE: "关闭",
             NEXT: "下一张",
@@ -614,13 +860,13 @@
         };
       }
 
-      $('.fancybox').fancybox(customSettings);
+      $(".fancybox").fancybox(customSettings);
     }
 
-    fancyFox();
+    fancyBox();
 
     $(window).smartresize(function() {
-      fancyFox();
+      fancyBox();
     });
   });
 })(jQuery);
@@ -628,6 +874,8 @@
   "use strict";
 
   var headerCoverResize = function() {
+    var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
     var headerCover = $(".post-header-cover");
     var headerCoverImage = new Image();
     headerCoverImage.src = headerCover
@@ -640,8 +888,8 @@
     var imgWidth = headerCoverImage.width;
 
     var resizeCover = function() {
-      var containerHeight = $(window).height() * 0.6;
-      var containerWidth = $(window).width();
+      var containerHeight = 500;
+      var containerWidth = window.innerWidth;
 
       if (containerWidth >= 855) {
         headerCover.css("height", "");
@@ -656,12 +904,13 @@
         return;
       }
 
+      headerCover.css("background-size", "");
       if (imgWidth <= containerWidth && imgHeight <= containerHeight) {
-        headerCover.css("height", imgHeight - 60);
+        headerCover.css("height", imgHeight);
       } else if (imgHeight / imgWidth < containerHeight / containerWidth) {
-        headerCover.css("height", (containerWidth / imgWidth) * imgHeight - 60);
+        headerCover.css("height", (containerWidth / imgWidth) * imgHeight);
       } else {
-        headerCover.css("height", "calc(50% - 60px)");
+        headerCover.css("height", "500px");
       }
     };
 
@@ -943,6 +1192,17 @@
     this.$noResults = this.$searchModal.find('.no-result');
     this.$resultsCount = this.$searchModal.find('.results-count');
     this.algolia = algoliaIndex;
+
+    function getScrollWidth() {
+      var noScroll, scroll, oDiv = document.createElement("DIV");
+      oDiv.style.cssText = "position:absolute; top:-1000px; width:100px; height:100px; overflow:hidden;";
+      noScroll = document.body.appendChild(oDiv).clientWidth;
+      oDiv.style.overflowY = "scroll";
+      scroll = oDiv.clientWidth;
+      document.body.removeChild(oDiv);
+      return noScroll-scroll;
+    }
+    this.$scrollbarWidth = getScrollWidth();
   };
 
   SearchModal.prototype = {
@@ -1004,6 +1264,9 @@
      * @returns {void}
      */
     open: function() {
+      if (this.$scrollbarWidth !== 0) {
+        this.showScrollbarMargin();
+      }
       this.showSearchModal();
       this.showOverlay();
       this.$searchInput.focus();
@@ -1017,6 +1280,9 @@
       this.hideSearchModal();
       this.hideOverlay();
       this.$searchInput.blur();
+      if (this.$scrollbarWidth !== 0) {
+        this.removeScrollbarMargin();
+      }
     },
 
     /**
@@ -1077,7 +1343,7 @@
       this.$searchModal.addClass('show processing');
       setTimeout(function() {
         $('#algolia-search-modal').removeClass('processing');
-      }, 1);
+      }, 0);
       //this.$searchModal.fadeIn(500);
     },
 
@@ -1089,7 +1355,7 @@
       this.$searchModal.addClass('processing');
       setTimeout(function() {
         $('#algolia-search-modal').removeClass('show processing');
-      }, 499);
+      }, 500);
       //this.$searchModal.fadeOut();
     },
 
@@ -1123,7 +1389,7 @@
       $('body').append('<div class="overlay"></div>');
       setTimeout(function() {
         $('.overlay').addClass("show");
-      }, 1);
+      }, 0);
 
       //$('.overlay').fadeIn();
       $('body').css('overflow', 'hidden');
@@ -1137,14 +1403,59 @@
       $('.overlay').removeClass('show');
       setTimeout(function() {
         $('.overlay').remove();
-      }, 499);
-      $('body').css('overflow', 'auto');
+      }, 500);
+      $('body').css('overflow', '');
 
 
       // $('.overlay').fadeOut(function() {
       //   $(this).remove();
       //   $('body').css('overflow', 'auto');
       // });
+    },
+
+    showScrollbarMargin: function () {
+      var body = $('body');
+      body.css('transition', 'none');
+      body.css('width', 'calc(100% - ' + this.$scrollbarWidth + 'px)');
+      body.css('margin-right', this.$scrollbarWidth);
+      body.css('border-right', this.$scrollbarWidth + 'px solid white');
+
+      var header = $('#header');
+      header.css('transition', 'none');
+      header.css('width', 'calc(100% - ' + this.$scrollbarWidth + 'px)');
+      header.css('margin-right', this.$scrollbarWidth);
+
+      var bottom = $('#bottom-bar');
+      bottom.css('transition', 'none');
+      bottom.css('width', 'calc(100% - 15px * 2 - ' + this.$scrollbarWidth + 'px)');
+      bottom.css('margin-right', this.$scrollbarWidth);
+
+      var toc = $('.toc');
+      toc.css('transition', 'none');
+      toc.css('right', 'calc((100% - 750px) / 2 - 200px - 15px + ' + this.$scrollbarWidth + 'px / 2)');
+
+      $('.modal').css('margin-left', '');
+    },
+
+    removeScrollbarMargin: function () {
+      $('body').css('border-right', '');
+
+      var marginElements = $('#header, #bottom-bar, body');
+
+      marginElements.css('margin-right', '');
+      marginElements.css('width', '');
+      setTimeout(function () {
+        marginElements.css('transition', '');
+      }, 500);
+
+      var toc = $('.toc');
+      toc.css('right', '');
+      setTimeout(function () {
+        toc.css('transition', '');
+      }, 500);
+
+      var modalMargin = $('.modal').css('margin-left');
+      $('.modal').css('margin-left', 'calc(' + modalMargin + ' + ' + this.$scrollbarWidth + 'px / 2)');
     }
   };
 

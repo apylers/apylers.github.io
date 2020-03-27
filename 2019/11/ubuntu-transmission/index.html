@@ -58,19 +58,19 @@
 
 
 
-  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/transmission.jpg">
-  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/transmission.jpg">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/transmission.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/transmission.png">
 
 
 
 
-  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/icon/favicon.png">
-  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/icon/favicon.png">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/icon/favicon.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/icon/favicon.png">
 
 
     <title>使用 transmission 搭建 BT 种子下载站</title>
 
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/icon/favicon.png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/icon/favicon.png">
     
 
     
@@ -86,7 +86,7 @@
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/css/style.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/css/style.min.css" />
     
     
 
@@ -131,11 +131,11 @@
     
       <div class="sidebar-profile">
         <a href="/">
-          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/icon/favicon.png" alt="作者的图片" />
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/icon/favicon.png" alt="作者的图片" />
         </a>
         <h4 class="sidebar-profile-name">Apylers</h4>
         
-          <h5 class="sidebar-profile-bio">This is a test site.</h5>
+          <h5 class="sidebar-profile-bio">This is my blog.</h5>
         
       </div>
     
@@ -197,7 +197,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link" href="mailto://apylers@cyh.me" target="_blank" rel="noopener">
+      <a class="sidebar-button-link" href="mailto://apylers@mail.cyh.me" target="_blank" rel="noopener">
     
       <i class="sidebar-button-icon fas fa-envelope"></i>
       
@@ -236,7 +236,7 @@
 
       
   <div class="post-header-cover text-center post-header-cover--partial"
-       style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/transmission.jpg')"
+       style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/transmission.png')"
        data-behavior="4">
     
   </div>
@@ -285,6 +285,7 @@
               
               
               
+              
               <p>在网上寻找资源的时候时不时可能遇到一些种子链接，必须通过 <a href="https://www.bittorrent.com/">BitTorrent</a> 等工具才能下载，但由于国内的 ip 地址较少，而且一般使用种子分享的资源体积都比较巨大，直接使用本地下载耗费很多无用的时间。我们如果自己搭建一个能长时间运行的服务器来代替我们下载，不仅不占用自己电脑的空间，还能 24h 不间断下载，节约了大量时间空间成本。</p>
 <div class='toc'></div>
 <h2 id="1-bt-种子下载原理">1 BT 种子下载原理</h2>
@@ -310,7 +311,7 @@
 <p>在 Ubuntu 系统下，可以直接通过 apt 安装的 transmission，但安装的可能不是最新版，以下通过 transmission 官方源来安装：</p>
 <pre><code class="language-shell">$ add-apt-repository ppa:transmissionbt/ppa
 $ apt update
-$ apt install transmission
+$ apt install transmission-daemon
 </code></pre>
 <p>这时 transmission 就已经安装好了，此时<strong>先停止 transmission</strong>：</p>
 <pre><code class="language-shell">$ systemctl stop transmission-daemon.service
@@ -574,13 +575,13 @@ $ chmod -R 755 transmission/
     
       <li class="share-option">
         <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcyh.me%2F2019%2F11%2Fubuntu-transmission%2F">
-          <i class="fab fa-facebook"></i><span>分享到 Facebook</span>
+          <i class="share-option-icon fab fa-facebook"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
         <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcyh.me%2F2019%2F11%2Fubuntu-transmission%2F">
-          <i class="fab fa-twitter"></i><span>分享到 Twitter</span>
+          <i class="share-option-icon fab fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
@@ -595,11 +596,11 @@ $ chmod -R 755 transmission/
       <i class="fas fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/icon/favicon.png" alt="作者的图片" />
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/icon/favicon.png" alt="作者的图片" />
     
     <h4 id="about-card-name">Apylers</h4>
     
-      <div id="about-card-bio">This is a test site.</div>
+      <div id="about-card-bio">This is my blog.</div>
     
     
       <div id="about-card-job">
@@ -623,10 +624,6 @@ $ chmod -R 755 transmission/
     <div class="modal">
       <div class="modal-header">
         <span class="close-button"><i class="fas fa-times"></i></span>
-        <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-          <span class="searchby-algolia-text text-color-light text-small">by</span>
-          <img class="searchby-algolia-logo" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/search/Algolia.png">
-        </a>
         <i class="search-icon fas fa-search"></i>
         <form id="algolia-search-form">
           <input type="text" id="algolia-search-input" name="search"
@@ -642,7 +639,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/11/ubuntu-transmission/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/transmission.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/transmission.png"/>
                   </a>
                 </div>
               
@@ -665,7 +662,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/11/ubuntu-kms/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/KMS.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/KMS.png"/>
                   </a>
                 </div>
               
@@ -688,7 +685,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/11/ubuntu-add-startup/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/startup-script.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/startup-script.png"/>
                   </a>
                 </div>
               
@@ -711,7 +708,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/nginx-upgrade/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/Nginx.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/Nginx.png"/>
                   </a>
                 </div>
               
@@ -734,7 +731,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/ubuntu-change-ssh-port/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/SSH.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/SSH.png"/>
                   </a>
                 </div>
               
@@ -757,7 +754,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/ubuntu-auto-completion/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/command-line.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/command-line.png"/>
                   </a>
                 </div>
               
@@ -780,7 +777,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/google-bbr/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/Google-BBR.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/Google-BBR.png"/>
                   </a>
                 </div>
               
@@ -803,7 +800,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/pip-upgrade-all/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/pip-Linux.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/pip-Linux.png"/>
                   </a>
                 </div>
               
@@ -826,7 +823,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/07/windows-activate/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/Windows-activation.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/Windows-activation.png"/>
                   </a>
                 </div>
               
@@ -849,7 +846,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/06/v2ray/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/V2Ray.png"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/V2Ray.png"/>
                   </a>
                 </div>
               
@@ -872,7 +869,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/05/wordpress-forget-password/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/password.gif"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/password.png"/>
                   </a>
                 </div>
               
@@ -895,7 +892,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/05/wordpress-email/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/Email.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/Email.png"/>
                   </a>
                 </div>
               
@@ -918,7 +915,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/04/shadowsocks/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/Shadowsocks.webp"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/Shadowsocks.png"/>
                   </a>
                 </div>
               
@@ -941,7 +938,7 @@ $ chmod -R 755 transmission/
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/04/wordpress-website/">
-                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/cover/WordPress.jpg"/>
+                    <img class="media-image" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/cover/WordPress.png"/>
                   </a>
                 </div>
               
@@ -969,6 +966,10 @@ $ chmod -R 755 transmission/
           data-message-other="找到 {n} 篇文章">
           共 14 篇文章
         </p>
+        <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+          <span class="searchby-algolia-text text-color-light text-small">by</span>
+          <img class="searchby-algolia-logo" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/search/Algolia.png">
+        </a>
       </div>
     </div>
   </div>
@@ -976,7 +977,7 @@ $ chmod -R 755 transmission/
 
     
   
-    <div id="cover" style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/background/%E6%9C%9D%E3%81%AE%E6%B5%B7%E6%B8%AF.jpg');"></div>
+    <div id="cover" style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/background/%E6%9C%9D%E3%81%AE%E6%B5%B7%E6%B8%AF.png');"></div>
   
 
 
@@ -1105,7 +1106,7 @@ $ chmod -R 755 transmission/
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.0/js/script.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.1/js/script.min.js"></script>
 
 
 <script lang="javascript">

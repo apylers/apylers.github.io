@@ -1,7 +1,7 @@
 import os
 import re
 
-tag = 'v1.0.0'
+tag = 'v1.0.1'
 cdn_url = 'https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@'
 
 
