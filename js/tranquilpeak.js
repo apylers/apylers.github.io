@@ -498,381 +498,6 @@
 ;(function($) {
   "use strict";
 
-  // Run fancybox feature
-
-  $(document).ready(function() {
-    /**
-     * Configure and run Fancybox plugin
-     * @returns {void}
-     */
-    function fancyBox() {
-      var arrows = true;
-      var thumbs = null;
-      var customSettings = {
-        // Close existing modals
-        // Set this to false if you do not need to stack multiple instances
-        closeExisting: false,
-
-        // Enable infinite gallery navigation
-        loop: true,
-
-        // Horizontal space between slides
-        gutter: 50,
-
-        // Enable keyboard navigation
-        keyboard: true,
-
-        // Should allow caption to overlap the content
-        preventCaptionOverlap: true,
-
-        // Should display navigation arrows at the screen edges
-        arrows: true,
-
-        // Should display counter at the top left corner
-        infobar: true,
-
-        // Should display close button (using `btnTpl.smallBtn` template) over the content
-        // Can be true, false, "auto"
-        // If "auto" - will be automatically enabled for "html", "inline" or "ajax" items
-        smallBtn: false,
-
-        // Should display toolbar (buttons at the top)
-        // Can be true, false, "auto"
-        // If "auto" - will be automatically hidden if "smallBtn" is enabled
-        toolbar: false,
-
-        // What buttons should appear in the top right corner.
-        // Buttons will be created using templates from `btnTpl` option
-        // and they will be placed into toolbar (class="fancybox-toolbar"` element)
-        buttons: [
-          "zoom",
-          //"share",
-          "slideShow",
-          //"fullScreen",
-          //"download",
-          "thumbs",
-          "close"
-        ],
-
-        // Detect "idle" time in seconds
-        idleTime: 3,
-
-        // Disable right-click and use simple image protection for images
-        protect: false,
-
-        // Shortcut to make content "modal" - disable keyboard navigtion, hide buttons, etc
-        modal: false,
-
-        image: {
-          // Wait for images to load before displaying
-          //   true  - wait for image to load and then display;
-          //   false - display thumbnail and load the full-sized image over top,
-          //           requires predefined image dimensions (`data-width` and `data-height` attributes)
-          preload: false
-        },
-
-        ajax: {
-          // Object containing settings for ajax request
-          settings: {
-            // This helps to indicate that request comes from the modal
-            // Feel free to change naming
-            data: {
-              fancybox: true
-            }
-          }
-        },
-
-        // Default content type if cannot be detected automatically
-        defaultType: "image",
-
-        // Open/close animation type
-        // Possible values:
-        //   false            - disable
-        //   "zoom"           - zoom images from/to thumbnail
-        //   "fade"
-        //   "zoom-in-out"
-        //
-        animationEffect: "zoom",
-
-        // Duration in ms for open/close animation
-        animationDuration: 500,
-
-        // Should image change opacity while zooming
-        // If opacity is "auto", then opacity will be changed if image and thumbnail have different aspect ratios
-        zoomOpacity: "auto",
-
-        // Transition effect between slides
-        //
-        // Possible values:
-        //   false            - disable
-        //   "fade'
-        //   "slide'
-        //   "circular'
-        //   "tube'
-        //   "zoom-in-out'
-        //   "rotate'
-        //
-        transitionEffect: "fade",
-
-        // Duration in ms for transition animation
-        transitionDuration: 500,
-
-        // Custom CSS class for slide element
-        slideClass: "",
-
-        // Custom CSS class for layout
-        baseClass: "",
-
-        // Container is injected into this element
-        parentEl: "body",
-
-        // Hide browser vertical scrollbars; use at your own risk
-        hideScrollbar: true,
-
-        // Focus handling
-        // ==============
-
-        // Try to focus on the first focusable element after opening
-        autoFocus: true,
-
-        // Put focus back to active element after closing
-        backFocus: true,
-
-        // Do not let user to focus on element outside modal content
-        trapFocus: true,
-
-        // Module specific options
-        // =======================
-
-        fullScreen: {
-          autoStart: false
-        },
-
-        // Set `touch: false` to disable panning/swiping
-        touch: false,
-
-        // Hash value when initializing manually,
-        // set `false` to disable hash change
-        hash: null,
-
-        // Customize or add new media types
-        // Example:
-        /*
-          media : {
-            youtube : {
-              params : {
-                autoplay : 0
-              }
-            }
-          }
-        */
-        media: {},
-
-        slideShow: {
-          autoStart: false,
-          speed: 3000
-        },
-
-        thumbs: {
-          autoStart: false, // Display thumbnails on opening
-          hideOnClose: true, // Hide thumbnail grid when closing animation starts
-          parentEl: ".fancybox-container", // Container is injected into this element
-          axis: "y" // Vertical (y) or horizontal (x) scrolling
-        },
-
-        // Use mousewheel to navigate gallery
-        // If 'auto' - enabled for images only
-        wheel: "auto",
-
-        // Callbacks
-        //==========
-
-        // See Documentation/API/Events for more information
-        // Example:
-        /*
-          afterShow: function( instance, current ) {
-            console.info( 'Clicked element:' );
-            console.info( current.opts.$orig );
-          }
-        */
-
-        onInit: $.noop, // When instance has been initialized
-
-        beforeLoad: $.noop, // Before the content of a slide is being loaded
-        afterLoad: $.noop, // When the content of a slide is done loading
-
-        beforeShow: function () {
-          function getScrollWidth() {
-            var noScroll, scroll, oDiv = document.createElement("DIV");
-            oDiv.style.cssText = "position:absolute; top:-1000px; width:100px; height:100px; overflow:hidden;";
-            noScroll = document.body.appendChild(oDiv).clientWidth;
-            oDiv.style.overflowY = "scroll";
-            scroll = oDiv.clientWidth;
-            document.body.removeChild(oDiv);
-            return noScroll-scroll;
-          }
-          var scrollbarWidth = getScrollWidth();
-
-          var body = $('body');
-          body.css('transition', 'none');
-          body.css('width', 'calc(100% - ' + scrollbarWidth + 'px)');
-          body.css('border-right', scrollbarWidth + 'px solid white');
-
-          var header = $('#header');
-          header.css('transition', 'none');
-          header.css('width', 'calc(100% - ' + scrollbarWidth + 'px)');
-          header.addClass('compensate-for-scrollbar');
-
-          var bottom = $('#bottom-bar');
-          bottom.css('transition', 'none');
-          bottom.css('width', 'calc(100% - 15px * 2 - ' + scrollbarWidth + 'px)');
-          bottom.addClass('compensate-for-scrollbar');
-
-          var toc = $('.toc');
-          toc.css('transition', 'none');
-          toc.css('right', 'calc((100% - 750px)/ 2 - 200px - 15px + ' + scrollbarWidth + 'px / 2)');
-
-        }, // Before open animation starts
-        afterShow: $.noop, // When content is done loading and animating
-
-        beforeClose: $.noop, // Before the instance attempts to close. Return false to cancel the close.
-        afterClose: function () {
-          $('body').css('border-right', '');
-
-          var marginElements = $('#header, #bottom-bar, body');
-
-          marginElements.removeClass('compensate-for-scrollbar');
-          marginElements.css('width', '');
-          setTimeout(function () {
-            marginElements.css('transition', '');
-          }, 0);
-
-          var toc = $('.toc');
-          toc.css('right', '');
-          setTimeout(function () {
-            toc.css('transition', '');
-          }, 0);
-        }, // After instance has been closed
-
-        onActivate: $.noop, // When instance is brought to front
-        onDeactivate: $.noop, // When other instance has been activated
-
-        // Interaction
-        // ===========
-
-        // Use options below to customize taken action when user clicks or double clicks on the fancyBox area,
-        // each option can be string or method that returns value.
-        //
-        // Possible values:
-        //   "close"           - close instance
-        //   "next"            - move to next gallery item
-        //   "nextOrClose"     - move to next gallery item or close if gallery has only one item
-        //   "toggleControls"  - show/hide controls
-        //   "zoom"            - zoom image (if loaded)
-        //   false             - do nothing
-
-        // Clicked on the content
-        clickContent: function(current, event) {
-          return current.type === "image" ? "zoom" : false;
-        },
-
-        // Clicked on the slide
-        clickSlide: "close",
-
-        // Clicked on the background (backdrop) element;
-        // if you have not changed the layout, then most likely you need to use `clickSlide` option
-        clickOutside: "close",
-
-        // Same as previous two, but for double click
-        dblclickContent: false,
-        dblclickSlide: false,
-        dblclickOutside: false,
-
-        // Custom options when mobile device is detected
-        // =============================================
-
-        mobile: {
-          preventCaptionOverlap: false,
-          idleTime: false,
-          clickContent: "close",
-          clickSlide: "close",
-          dblclickContent: function(current, event) {
-            return current.type === "image" ? "zoom" : false;
-          },
-          dblclickSlide: function(current, event) {
-            return current.type === "image" ? "zoom" : false;
-          }
-        },
-
-        // Internationalization
-        // ====================
-
-        lang: "cn",
-        i18n: {
-          en: {
-            CLOSE: "Close",
-            NEXT: "Next",
-            PREV: "Previous",
-            ERROR: "The requested content cannot be loaded. <br/> Please try again later.",
-            PLAY_START: "Start slideshow",
-            PLAY_STOP: "Pause slideshow",
-            FULL_SCREEN: "Full screen",
-            THUMBS: "Thumbnails",
-            DOWNLOAD: "Download",
-            SHARE: "Share",
-            ZOOM: "Zoom"
-          },
-          de: {
-            CLOSE: "Schliessen",
-            NEXT: "Weiter",
-            PREV: "Zurück",
-            ERROR: "Die angeforderten Daten konnten nicht geladen werden. <br/> Bitte versuchen Sie es später nochmal.",
-            PLAY_START: "Diaschau starten",
-            PLAY_STOP: "Diaschau beenden",
-            FULL_SCREEN: "Vollbild",
-            THUMBS: "Vorschaubilder",
-            DOWNLOAD: "Herunterladen",
-            SHARE: "Teilen",
-            ZOOM: "Maßstab"
-          },
-          cn: {
-            CLOSE: "关闭",
-            NEXT: "下一张",
-            PREV: "上一张",
-            ERROR: "无法加载，<br/>请稍后重试。",
-            PLAY_START: "幻灯片放映",
-            PLAY_STOP: "停止放映",
-            FULL_SCREEN: "全屏",
-            THUMBS: "缩略图",
-            DOWNLOAD: "下载",
-            SHARE: "分享",
-            ZOOM: "缩放"
-          }
-        }
-      };
-
-      // disable navigation arrows and display thumbs on medium and large screens
-      if ($(window).height() > 480) {
-        arrows = false;
-        thumbs = {
-          width: 70,
-          height: 70
-        };
-      }
-
-      $(".fancybox").fancybox(customSettings);
-    }
-
-    fancyBox();
-
-    $(window).smartresize(function() {
-      fancyBox();
-    });
-  });
-})(jQuery);
-;(function($) {
-  "use strict";
-
   var headerCoverResize = function() {
     var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
@@ -1176,31 +801,32 @@
   });
 })(jQuery);
 ;(function($) {
-  'use strict';
+  "use strict";
 
   /**
    * Search modal with Algolia
    * @constructor
    */
   var SearchModal = function() {
-    this.$openButton = $('.open-algolia-search');
-    this.$searchModal = $('#algolia-search-modal');
-    this.$closeButton = this.$searchModal.find('.close-button');
-    this.$searchForm = $('#algolia-search-form');
-    this.$searchInput = $('#algolia-search-input');
-    this.$results = this.$searchModal.find('.results');
-    this.$noResults = this.$searchModal.find('.no-result');
-    this.$resultsCount = this.$searchModal.find('.results-count');
+    this.$openButton = $(".open-algolia-search");
+    this.$searchModal = $("#algolia-search-modal");
+    this.$closeButton = this.$searchModal.find(".close-button");
+    this.$searchForm = $("#algolia-search-form");
+    this.$searchInput = $("#algolia-search-input");
+    this.$results = this.$searchModal.find(".results");
+    this.$noResults = this.$searchModal.find(".no-result");
+    this.$resultsCount = this.$searchModal.find(".results-count");
     this.algolia = algoliaIndex;
+    this.$originOverflow = $('body').css('overflow');
 
     function getScrollWidth() {
-      var noScroll, scroll, oDiv = document.createElement("DIV");
+      var oDiv = document.createElement("DIV");
       oDiv.style.cssText = "position:absolute; top:-1000px; width:100px; height:100px; overflow:hidden;";
-      noScroll = document.body.appendChild(oDiv).clientWidth;
+      var noScroll = document.body.appendChild(oDiv).clientWidth;
       oDiv.style.overflowY = "scroll";
-      scroll = oDiv.clientWidth;
+      var scroll = oDiv.clientWidth;
       document.body.removeChild(oDiv);
-      return noScroll-scroll;
+      return noScroll - scroll;
     }
     this.$scrollbarWidth = getScrollWidth();
   };
@@ -1224,11 +850,11 @@
         var target = event.target || event.srcElement;
         // exit if user is focusing an input or textarea
         var tagName = target.tagName.toUpperCase();
-        if (tagName === 'INPUT' || tagName === 'TEXTAREA') {
+        if (tagName === "INPUT" || tagName === "TEXTAREA") {
           return;
         }
 
-        if (event.keyCode === 83 && !self.$searchModal.is(':visible')) {
+        if (event.keyCode === 83 && !self.$searchModal.is(":visible")) {
           self.open();
         }
       });
@@ -1247,7 +873,7 @@
 
       // close modal when `ESC` button is pressed
       $(document).keyup(function(e) {
-        if (e.keyCode === 27 && self.$searchModal.is(':visible')) {
+        if (e.keyCode === 27 && self.$searchModal.is(":visible")) {
           self.close();
         }
       });
@@ -1264,6 +890,7 @@
      * @returns {void}
      */
     open: function() {
+      this.$originOverflow = $('body').css('overflow');
       if (this.$scrollbarWidth !== 0) {
         this.showScrollbarMargin();
       }
@@ -1304,7 +931,7 @@
      * @returns {void}
      */
     showResults: function(posts) {
-      var html = '';
+      var html = "";
       posts.forEach(function(post) {
         var lang = window.navigator.userLanguage || window.navigator.language || post.lang;
 
@@ -1313,24 +940,24 @@
           html += '<div class="media-right">';
           html += '<a class="link-unstyled hide-xs" href="' + post.relpermalink + '">';
           html += '<img class="media-image" ' + 'src="' + post.cover + '" />';
-          html += '</a>';
-          html += '</div>';
+          html += "</a>";
+          html += "</div>";
         }
 
         html += '<div class="media-body">';
         html += '<a class="link-unstyled" href="' + post.relpermalink + '">';
-        html += '<h3 class="media-heading">' + post.title + '</h3>';
-        html += '</a>';
+        html += '<h3 class="media-heading">' + post.title + "</h3>";
+        html += "</a>";
         html += '<span class="media-meta">';
         html += '<span class="media-date text-small">';
         html += post.date;
-        html += '</span>';
-        html += '</span>';
-        html += '<div class="media-content font-default">' + post.summary + '</div>';
-        html += '</div>';
+        html += "</span>";
+        html += "</span>";
+        html += '<div class="media-content font-default">' + post.summary + "</div>";
+        html += "</div>";
         html += '<div style="clear:both;"></div>';
-        html += '<hr>';
-        html += '</div>';
+        html += "<hr>";
+        html += "</div>";
       });
       this.$results.html(html);
     },
@@ -1340,9 +967,9 @@
      * @returns {void}
      */
     showSearchModal: function() {
-      this.$searchModal.addClass('show processing');
+      this.$searchModal.addClass("show processing");
       setTimeout(function() {
-        $('#algolia-search-modal').removeClass('processing');
+        $("#algolia-search-modal").removeClass("processing");
       }, 0);
       //this.$searchModal.fadeIn(500);
     },
@@ -1352,9 +979,9 @@
      * @returns {void}
      */
     hideSearchModal: function() {
-      this.$searchModal.addClass('processing');
+      this.$searchModal.addClass("processing");
       setTimeout(function() {
-        $('#algolia-search-modal').removeClass('show processing');
+        $("#algolia-search-modal").removeClass("show processing");
       }, 500);
       //this.$searchModal.fadeOut();
     },
@@ -1365,17 +992,15 @@
      * @returns {void}
      */
     showResultsCount: function(count) {
-      var string = '';
+      var string = "";
       if (count < 1) {
-        string = this.$resultsCount.data('message-zero');
+        string = this.$resultsCount.data("message-zero");
         this.$noResults.show();
-      }
-      else if (count === 1) {
-        string = this.$resultsCount.data('message-one');
+      } else if (count === 1) {
+        string = this.$resultsCount.data("message-one");
         this.$noResults.hide();
-      }
-      else if (count > 1) {
-        string = this.$resultsCount.data('message-other').replace(/\{n\}/, count);
+      } else if (count > 1) {
+        string = this.$resultsCount.data("message-other").replace(/\{n\}/, count);
         this.$noResults.hide();
       }
       this.$resultsCount.html(string);
@@ -1386,13 +1011,13 @@
      * @returns {void}
      */
     showOverlay: function() {
-      $('body').append('<div class="overlay"></div>');
+      $("body").append('<div class="overlay"></div>');
       setTimeout(function() {
-        $('.overlay').addClass("show");
+        $(".overlay").addClass("show");
       }, 0);
 
       //$('.overlay').fadeIn();
-      $('body').css('overflow', 'hidden');
+      $("body").css("overflow", "hidden");
     },
 
     /**
@@ -1400,12 +1025,11 @@
      * @returns {void}
      */
     hideOverlay: function() {
-      $('.overlay').removeClass('show');
+      $(".overlay").removeClass("show");
       setTimeout(function() {
-        $('.overlay').remove();
+        $(".overlay").remove();
       }, 500);
-      $('body').css('overflow', '');
-
+      $("body").css("overflow", this.$originOverflow);
 
       // $('.overlay').fadeOut(function() {
       //   $(this).remove();
@@ -1413,55 +1037,58 @@
       // });
     },
 
-    showScrollbarMargin: function () {
-      var body = $('body');
-      body.css('transition', 'none');
-      body.css('width', 'calc(100% - ' + this.$scrollbarWidth + 'px)');
-      body.css('margin-right', this.$scrollbarWidth);
-      body.css('border-right', this.$scrollbarWidth + 'px solid white');
+    showScrollbarMargin: function() {
+      var body = $("body");
+      var bodyWidth = window.getComputedStyle(document.body).getPropertyValue("width");
+      body.css("transition", "none");
+      body.css("width", bodyWidth);
+      body.css("margin-right", this.$scrollbarWidth);
+      body.css("border-right", this.$scrollbarWidth + "px solid white");
 
-      var header = $('#header');
-      header.css('transition', 'none');
-      header.css('width', 'calc(100% - ' + this.$scrollbarWidth + 'px)');
-      header.css('margin-right', this.$scrollbarWidth);
+      var header = $("#header");
+      var headerWidth = window.getComputedStyle(document.getElementById("header")).getPropertyValue("width");
+      header.css("transition", "none");
+      header.css("width", headerWidth);
+      header.css("margin-right", this.$scrollbarWidth);
 
-      var bottom = $('#bottom-bar');
-      bottom.css('transition', 'none');
-      bottom.css('width', 'calc(100% - 15px * 2 - ' + this.$scrollbarWidth + 'px)');
-      bottom.css('margin-right', this.$scrollbarWidth);
+      var bottom = $("#bottom-bar");
+      var bottomWidth = window.getComputedStyle(document.getElementById("bottom-bar")).getPropertyValue("width");
+      bottom.css("transition", "none");
+      bottom.css("width", bottomWidth);
+      bottom.css("margin-right", this.$scrollbarWidth);
 
-      var toc = $('.toc');
-      toc.css('transition', 'none');
-      toc.css('right', 'calc((100% - 750px) / 2 - 200px - 15px + ' + this.$scrollbarWidth + 'px / 2)');
+      var toc = $(".toc");
+      toc.css("transition", "none");
+      toc.css("right", "calc((100% - 750px) / 2 - 200px - 15px + " + this.$scrollbarWidth + "px / 2)");
 
-      $('.modal').css('margin-left', '');
+      $(".modal").css("margin-left", "");
     },
 
-    removeScrollbarMargin: function () {
-      $('body').css('border-right', '');
+    removeScrollbarMargin: function() {
+      $("body").css("border-right", "");
 
-      var marginElements = $('#header, #bottom-bar, body');
+      var marginElements = $("#header, #bottom-bar, body");
 
-      marginElements.css('margin-right', '');
-      marginElements.css('width', '');
-      setTimeout(function () {
-        marginElements.css('transition', '');
+      marginElements.css("margin-right", "");
+      marginElements.css("width", "");
+      setTimeout(function() {
+        marginElements.css("transition", "");
       }, 500);
 
-      var toc = $('.toc');
-      toc.css('right', '');
-      setTimeout(function () {
-        toc.css('transition', '');
+      var toc = $(".toc");
+      toc.css("right", "");
+      setTimeout(function() {
+        toc.css("transition", "");
       }, 500);
 
-      var modalMargin = $('.modal').css('margin-left');
-      $('.modal').css('margin-left', 'calc(' + modalMargin + ' + ' + this.$scrollbarWidth + 'px / 2)');
+      var modalMargin = $(".modal").css("margin-left");
+      $(".modal").css("margin-left", "calc(" + modalMargin + " + " + this.$scrollbarWidth + "px / 2)");
     }
   };
 
   $(document).ready(function() {
     // launch feature only if there is an Algolia index available
-    if (typeof algoliaIndex !== 'undefined') {
+    if (typeof algoliaIndex !== "undefined") {
       var searchModal = new SearchModal();
       searchModal.run();
     }
@@ -1569,7 +1196,7 @@
     this.$sidebar = $('#sidebar');
     this.$openBtn = $('#btn-open-sidebar');
     // Elements where the user can click to close the sidebar
-    this.$closeBtn = $('#header, #main, .post-header-cover, #btn-close-sidebar');
+    this.$closeBtn = $('#btn-open-sidebar, #main, .post-header-cover, #btn-close-sidebar');
     // Elements affected by the swipe of the sidebar
     // The `pushed` class is added to each elements
     // Each element has a different behavior when the sidebar is opened
@@ -1686,12 +1313,14 @@
       if (this.$sidebar.hasClass('pushed') && !this.$sidebar.hasClass('processing')) {
         // Swipe the sidebar to the left
         this.$sidebar.addClass('processing').removeClass('pushed processing');
-        if ($("#btn-close-sidebar").css("display") === "none") {
-          // go back to the default overflow
-          this.$body.css('overflow-x', 'auto');
-        } else {
-          this.$body.css('overflow', 'auto');
-        }
+        setTimeout(function() {
+          if ($("#btn-close-sidebar").css("display") === "none") {
+            // go back to the default overflow
+            $('body').css('overflow-x', '');
+          } else {
+            $('body').css('overflow', '');
+          }
+        }, 500);
       }
     },
 
@@ -1749,6 +1378,10 @@
       // and prevent multiple click on the open button with `.processing` class
       if (!this.$toc.hasClass("pushed") && !this.$toc.hasClass("processing")) {
         // Swipe the blog to the right
+        var scrolled = $(window).scrollTop();
+        var origintop = parseInt(this.$toc.css("top"));
+        this.$toc.css("top", scrolled - 606 + origintop);
+
         this.$toc.addClass("processing pushed");
 
         setTimeout(function() {
@@ -1769,6 +1402,11 @@
         // Swipe the blog to the left
         self.$toc.addClass("processing");
         self.$toc.removeClass("processing pushed");
+        setTimeout(function() {
+          var scrolled = $(window).scrollTop();
+          var currenttop = parseInt(self.$toc.css("top"));
+          self.$toc.css("top", currenttop + 606 - scrolled);
+        }, 500);
       }
     }
   };
