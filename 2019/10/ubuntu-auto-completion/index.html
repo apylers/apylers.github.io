@@ -52,19 +52,19 @@
 
 
 
-  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/command-line.png">
-  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/command-line.png">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/command-line.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/command-line.png">
 
 
 
 
-  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/icon/favicon.png">
-  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/icon/favicon.png">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/icon/author.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/icon/author.png">
 
 
     <title>Ubuntu 开启输入自动补全功能</title>
 
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/icon/favicon.png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/icon/favicon.png">
     
 
     
@@ -72,13 +72,13 @@
     <link rel="canonical" href="https://cyh.me/2019/10/ubuntu-auto-completion/">
 
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.12.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.13.0/css/fontawesome.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@v3.5.7/dist/jquery.fancybox.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/atom-one-dark.min.css"/>
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/css/style.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/css/style.min.css" />
     
     
 
@@ -123,7 +123,7 @@
     
       <div class="sidebar-profile">
         <a href="/">
-          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/icon/favicon.png" alt="作者的图片" />
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/icon/author.png" alt="作者的图片" />
         </a>
         <h4 class="sidebar-profile-name">Apylers</h4>
         
@@ -228,7 +228,7 @@
 
       
   <div class="post-header-cover text-center post-header-cover--partial"
-       style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/command-line.png')"
+       style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/command-line.png')"
        data-behavior="4">
     
   </div>
@@ -279,14 +279,13 @@
               
               
               <p>有时候不知什么原因，自己的 Ubuntu 系统或者刚重装的 VPS 没有开启自动补全， 在命令行下的输入效率便降低了很多很多，这里就告诉大家如何开启。</p>
-<h2 id="1-安装自动补全组件">1 安装自动补全组件</h2>
-<p>出现这种情况的原因之一很有可能是自动补全组件没有安装，在命令行输入</p>
+<p>出现这种情况的原因之一很有可能是自动补全组件没有安装，在命令行输入：</p>
 <pre><code class="language-shell">$ apt install bash-completion
 </code></pre>
-<h2 id="2-修改-bashrc">2 修改 .bashrc</h2>
+<p>然后修改 <code>.bashrc</code>：</p>
 <pre><code class="language-shell">$ vim ~/.bashrc
 </code></pre>
-<p>在文件末尾找到</p>
+<p>在文件末尾找到：</p>
 <pre><code class="language-bash"># enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -302,7 +301,7 @@ if [ -f /etc/bash_completion ] &amp;&amp; ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 </code></pre>
-<p>再重启系统，就可以愉快地使用自动补全啦！</p>
+<p>再执行 <code>source .bashrc</code> 或者重启系统，就可以愉快地使用自动补全啦！</p>
               
             </div>
           </div>
@@ -324,28 +323,28 @@ fi
             
             <div class="post-actions-wrap">
   
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/10/ubuntu-change-ssh-port/" data-tooltip="Ubuntu 修改 SSH 端口">
-              
-                  <i class="fas fa-angle-left"></i>
-                  <span class="text-small icon-ml">下一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/10/google-bbr/" data-tooltip="Ubuntu 快速开启 Google BBR 方法">
-              
-                  <span class="text-small icon-mr">上一篇</span>
-                  <i class="fas fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
+    <nav >
+      <ul class="post-actions post-action-nav">
+        
+          <li class="post-action">
+            
+              <a class="post-action-btn btn btn--default tooltip--top" href="/2019/10/ubuntu-change-ssh-port/" data-tooltip="Ubuntu 修改 SSH 端口">
+            
+                <i class="fas fa-angle-left"></i>
+                <span class="text-small icon-ml">下一篇</span>
+              </a>
+          </li>
+          <li class="post-action">
+            
+              <a class="post-action-btn btn btn--default tooltip--top" href="/2019/10/google-bbr/" data-tooltip="Ubuntu 快速开启 Google BBR 方法">
+            
+                <span class="text-small icon-mr">上一篇</span>
+                <i class="fas fa-angle-right"></i>
+              </a>
+          </li>
+        
+      </ul>
+    </nav>
     <ul class="post-actions post-action-share" >
       
         <li class="post-action hide-lg hide-md hide-sm">
@@ -385,28 +384,28 @@ fi
       <div id="bottom-bar" class="post-bottom-bar bottom-down" data-behavior="4">
         <div class="post-actions-wrap">
   
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/10/ubuntu-change-ssh-port/" data-tooltip="Ubuntu 修改 SSH 端口">
-              
-                  <i class="fas fa-angle-left"></i>
-                  <span class="text-small icon-ml">下一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/10/google-bbr/" data-tooltip="Ubuntu 快速开启 Google BBR 方法">
-              
-                  <span class="text-small icon-mr">上一篇</span>
-                  <i class="fas fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
+    <nav >
+      <ul class="post-actions post-action-nav">
+        
+          <li class="post-action">
+            
+              <a class="post-action-btn btn btn--default tooltip--top" href="/2019/10/ubuntu-change-ssh-port/" data-tooltip="Ubuntu 修改 SSH 端口">
+            
+                <i class="fas fa-angle-left"></i>
+                <span class="text-small icon-ml">下一篇</span>
+              </a>
+          </li>
+          <li class="post-action">
+            
+              <a class="post-action-btn btn btn--default tooltip--top" href="/2019/10/google-bbr/" data-tooltip="Ubuntu 快速开启 Google BBR 方法">
+            
+                <span class="text-small icon-mr">上一篇</span>
+                <i class="fas fa-angle-right"></i>
+              </a>
+          </li>
+        
+      </ul>
+    </nav>
     <ul class="post-actions post-action-share" >
       
         <li class="post-action hide-lg hide-md hide-sm">
@@ -461,7 +460,7 @@ fi
       <i class="fas fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/icon/favicon.png" alt="作者的图片" />
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/icon/author.png" alt="作者的图片" />
     
     <h4 id="about-card-name">Apylers</h4>
     
@@ -504,7 +503,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/11/ubuntu-transmission/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/transmission.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/transmission.png"/>
                   </a>
                 </div>
               
@@ -527,7 +526,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/11/ubuntu-kms/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/KMS.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/KMS.png"/>
                   </a>
                 </div>
               
@@ -550,7 +549,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/11/ubuntu-add-startup/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/startup-script.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/startup-script.png"/>
                   </a>
                 </div>
               
@@ -573,7 +572,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/nginx-upgrade/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/Nginx.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/Nginx.png"/>
                   </a>
                 </div>
               
@@ -596,7 +595,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/ubuntu-change-ssh-port/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/SSH.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/SSH.png"/>
                   </a>
                 </div>
               
@@ -619,7 +618,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/ubuntu-auto-completion/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/command-line.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/command-line.png"/>
                   </a>
                 </div>
               
@@ -642,7 +641,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/google-bbr/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/Google-BBR.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/Google-BBR.png"/>
                   </a>
                 </div>
               
@@ -665,7 +664,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/10/pip-upgrade-all/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/pip-Linux.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/pip-Linux.png"/>
                   </a>
                 </div>
               
@@ -688,7 +687,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/07/windows-activate/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/Windows-activation.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/Windows-activation.png"/>
                   </a>
                 </div>
               
@@ -711,7 +710,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/06/v2ray/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/V2Ray.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/V2Ray.png"/>
                   </a>
                 </div>
               
@@ -734,7 +733,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/05/wordpress-forget-password/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/password.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/password.png"/>
                   </a>
                 </div>
               
@@ -757,7 +756,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/05/wordpress-email/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/Email.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/Email.png"/>
                   </a>
                 </div>
               
@@ -780,7 +779,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/04/shadowsocks/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/Shadowsocks.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/Shadowsocks.png"/>
                   </a>
                 </div>
               
@@ -803,7 +802,7 @@ fi
               
                 <div class="media-right">
                   <a class="link-unstyled hide-xs" href="https://cyh.me/2019/04/wordpress-website/">
-                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/cover/WordPress.png"/>
+                    <img class="lazyload media-image" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/cover/WordPress.png"/>
                   </a>
                 </div>
               
@@ -833,7 +832,7 @@ fi
         </p>
         <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
           <span class="searchby-algolia-text text-color-light text-small">by</span>
-          <img class="searchby-algolia-logo" src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/search/Algolia.png">
+          <img class="lazyload searchby-algolia-logo" data-src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/search/Algolia.png">
         </a>
       </div>
     </div>
@@ -841,10 +840,6 @@ fi
 
 
     
-  
-    <div id="cover" style="background-image:url('https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/background/%E6%9C%9D%E3%81%AE%E6%B5%B7%E6%B8%AF.png');"></div>
-  
-
 
     
 <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.4.1/dist/jquery.min.js"></script>
@@ -1303,7 +1298,7 @@ fi
 
 
 
-<script defer src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.2/js/script.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@v1.0.3/js/script.min.js"></script>
 
 <script>
   window.onload = updateMinWidth;
