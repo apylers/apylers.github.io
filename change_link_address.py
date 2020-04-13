@@ -6,13 +6,12 @@ import requests
 from fontTools.subset import main as subset
 import sys
 
-tag = 'v1.0.3'
+tag = 'v1.0.4'
 
 cdn_url = 'https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@'
 fontawesome_url = "https://fontawesome.com/cheatsheet/free/"
 
-exclude_file_list = ['.gitignore', 'change_link_address.py', 'CNAME', 'favicon.png', 'code.txt', 'content.txt',
-                     'font-awesome.json', 'font-awesome-unicode.txt']
+exclude_file_list = ['.gitignore', 'change_link_address.py', 'CNAME', 'favicon.png']
 exclude_dir_list = ['.git', '.idea', 'background', 'cover', 'icon', 'img', 'search', 'fonts']
 
 original_font_dir = '../fonts/'
@@ -125,14 +124,6 @@ for path, dir_list, file_list in g:
                 all_code |= code_content
                 all_fas |= fas_icons
                 all_fab |= fab_icons
-
-with open("fas-unicode.txt", "w", newline="\n") as f:
-    unicodes = get_icon_unicode(all_fas)
-    f.write('\n'.join(unicodes))
-
-with open("fab-unicode.txt", "w", newline="\n") as f:
-    unicodes = get_icon_unicode(all_fab)
-    f.write('\n'.join(unicodes))
 
 subset_font(original_font_dir + 'SourceHanMonoSC-Regular.otf', generate_font_dir + 'SourceHanMonoSC-Regular.woff2',
             text=''.join(sorted(all_code)), flavor="woff2")

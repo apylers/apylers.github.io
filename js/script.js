@@ -817,7 +817,7 @@
     this.$noResults = this.$searchModal.find(".no-result");
     this.$resultsCount = this.$searchModal.find(".results-count");
     this.algolia = algoliaIndex;
-    this.$originOverflow = $('body').css('overflow');
+    this.$originOverflow = document.body.style.overflow;
 
     function getScrollWidth() {
       var oDiv = document.createElement("DIV");
@@ -890,7 +890,7 @@
      * @returns {void}
      */
     open: function() {
-      this.$originOverflow = $('body').css('overflow');
+      this.$originOverflow = document.body.style.overflow;
       if (this.$scrollbarWidth !== 0) {
         this.showScrollbarMargin();
       }
