@@ -545,8 +545,7 @@
       resizeCover();
     });
   };
-
-  $(document).ready(function() {
+  $(window).on("load", function() {
     if ($(".post-header-cover").length > 0) {
       headerCoverResize();
     }
