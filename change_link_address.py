@@ -31,8 +31,8 @@ def replace_with_jsdelivr(file_path):
     with open(file_path, "r", encoding="UTF-8") as f:
         content = f.read()
         new_content = re.sub(
-            r"(https://cyh\.me)?/((?:background|cover|icon|img|search|css|js))",
-            lambda x: cdn_url + tag + "/" + x.group(2),
+            r"([(=])((?:'|\"|))(https://cyh\.me)?/((?:background|cover|icon|img|search|css|js))",
+            lambda x: x.group(1) + x.group(2) + cdn_url + tag + "/" + x.group(4),
             content,
         )
     with open(file_path, "w", newline="\n", encoding="UTF-8") as f:
