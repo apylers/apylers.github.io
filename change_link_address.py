@@ -6,7 +6,7 @@ import requests
 from fontTools.subset import main as subset
 import sys
 
-tag = "v1.0.5"
+tag = "v1.0.6"
 
 cdn_url = "https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@"
 fontawesome_url = "https://fontawesome.com/cheatsheet/free/"
@@ -31,7 +31,7 @@ def replace_with_jsdelivr(file_path):
     with open(file_path, "r", encoding="UTF-8") as f:
         content = f.read()
         new_content = re.sub(
-            r"([(=])((?:'|\"|))(https://cyh\.me)?/((?:background|cover|icon|img|search|css|js))",
+            r"([:(=])((?:'|\"|))(https://cyh\.me)?/((?:background|cover|icon|img|search|css|js))",
             lambda x: x.group(1) + x.group(2) + cdn_url + tag + "/" + x.group(4),
             content,
         )
