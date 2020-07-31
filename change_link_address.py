@@ -6,7 +6,7 @@ import requests
 from fontTools.subset import main as subset
 import sys
 
-tag = "v1.0.6"
+tag = "v1.0.7"
 
 cdn_url = "https://cdn.jsdelivr.net/gh/apylers/apylers.github.io@"
 fontawesome_url = "https://fontawesome.com/cheatsheet/free/"
