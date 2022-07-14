@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on 幸运小站</title>
+    <link>https://cyh.me/posts/</link>
+    <description>Recent content in Posts on 幸运小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cyh.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网易云音乐歌单搜索爬虫</title>
+      <link>https://cyh.me/posts/music-163-com-crawler/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/music-163-com-crawler/</guid>
+      <description>&lt;p&gt;最近实现了在网易云音乐搜索关键词爬取歌单内容的方法，涉及到部分对 JavaScript 的分析，稍有难度，这里作一些介绍并附上代码！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>通过 fontTools 精简字体</title>
+      <link>https://cyh.me/posts/font-minification/</link>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/font-minification/</guid>
+      <description>&lt;p&gt;建站时很多博主希望用个性化字体，能很好地美化博客界面，但是使用之后才发现，字体的体积巨大，尤其是中文字体，动不动就可能有几十 MB，在这巨大体积的压迫之下不得不选择放弃使用。但是怎么能放弃呢！！！这里就教给大家一种简单精简字体的方式——通过 fontTools。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用 transmission 搭建 BT 种子下载站</title>
+      <link>https://cyh.me/posts/ubuntu-transmission/</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/ubuntu-transmission/</guid>
+      <description>&lt;p&gt;在网上寻找资源的时候时不时可能遇到一些种子链接，必须通过 &lt;a href=&#34;https://www.bittorrent.com/&#34;&gt;BitTorrent&lt;/a&gt; 等工具才能下载，但由于国内的 ip 地址较少，而且一般使用种子分享的资源体积都比较巨大，直接使用本地下载耗费很多无用的时间。我们如果自己搭建一个能长时间运行的服务器来代替我们下载，不仅不占用自己电脑的空间，还能 24h 不间断下载，节约了大量时间空间成本。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用 Ubuntu 搭建一个 KMS 服务器</title>
+      <link>https://cyh.me/posts/ubuntu-kms/</link>
+      <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/ubuntu-kms/</guid>
+      <description>&lt;p&gt;有时候新装的 Windows 系统会需要使用到 KMS 激活，这时打开激活界面会显示 &lt;code&gt;Windows 10 已使用你组织的激活服务激活&lt;/code&gt;。有人可能怀疑其中的安全性，为了消除这种担心，选择自己搭建一个 KMS 服务器不失为一种好的选择。废话不多说，以下开始！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在 Ubuntu 中添加开机启动项的简易方式</title>
+      <link>https://cyh.me/posts/ubuntu-add-startup/</link>
+      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/ubuntu-add-startup/</guid>
+      <description>&lt;p&gt;在使用服务器时，多次遇到需要添加开机启动项的情况，上网查了很多教程，基本上都是通过修改 &lt;code&gt;rc.local&lt;/code&gt; 的方式来达成目的，但不知为何，有时按教程操作却不起作用。在这里介绍一种 100% 能成功的操作方式 —— 通过 crontab 实现！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nginx 升级到最新 Stable 版本</title>
+      <link>https://cyh.me/posts/nginx-upgrade/</link>
+      <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/nginx-upgrade/</guid>
+      <description>&lt;p&gt;Ubuntu 中直接安装的 Nginx 并非最新的 Stable 版本，在这里本教程参考 &lt;a href=&#34;https://nginx.org/en/linux_packages.html#Ubuntu&#34;&gt;Nginx 官方教程&lt;/a&gt; 给出的方法，教大家如何升级。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 开启输入自动补全功能</title>
+      <link>https://cyh.me/posts/ubuntu-auto-completion/</link>
+      <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/ubuntu-auto-completion/</guid>
+      <description>&lt;p&gt;有时候不知什么原因，自己的 Ubuntu 系统或者刚重装的 VPS 没有开启自动补全， 在命令行下的输入效率便降低了很多很多，这里就告诉大家如何开启。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 快速开启 Google BBR 方法</title>
+      <link>https://cyh.me/posts/google-bbr/</link>
+      <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/google-bbr/</guid>
+      <description>&lt;p&gt;Google BBR 是 Google 开源的拥塞控制算法， 开启 BBR 加速的 VPS，网速甚至有可能提升好几个数量级。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 修改 SSH 端口</title>
+      <link>https://cyh.me/posts/ubuntu-change-ssh-port/</link>
+      <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/ubuntu-change-ssh-port/</guid>
+      <description>&lt;p&gt;Ubuntu 服务器 SSH 默认端口是 22，在公网下容易受到攻击，在这种情况更换 SSH 端口便是十分重要的，而更换方式也是十分简单。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一条命令解决 pip 批量更新问题</title>
+      <link>https://cyh.me/posts/pip-upgrade-all/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/pip-upgrade-all/</guid>
+      <description>&lt;p&gt;在用 pip 管理包时尤其头疼的便是看到有大量更新的时候无法一键升级，这里给出用一条命令解决的方式！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>激活 Windows 10</title>
+      <link>https://cyh.me/posts/windows-activate/</link>
+      <pubDate>Sun, 28 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/windows-activate/</guid>
+      <description>&lt;p&gt;经常遇到重装 Windows 后发现自己的系统并未激活，这里提供一个简单有效的方式给大家。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>V2Ray 搭建教程</title>
+      <link>https://cyh.me/posts/v2ray/</link>
+      <pubDate>Sun, 30 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/v2ray/</guid>
+      <description>&lt;p&gt;自从今年 6 月 1 日开始的大规模封禁，我的 Shadowsocks 也受到了严重的影响，为了解决这一问题，我开始着手寻找一个更安全更稳定的翻墙方式，这便是 V2Ray。经历多次安装失败后，这里总结出一套完整的、不易出错的教程，内容基于 &lt;a href=&#34;https://v2ray.com/&#34;&gt;V2Ray 官方网站&lt;/a&gt;以及&lt;a href=&#34;https://toutyrater.github.io/&#34;&gt;白话文教程&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>忘记 WordPress 密码怎么办？</title>
+      <link>https://cyh.me/posts/wordpress-forget-password/</link>
+      <pubDate>Thu, 02 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/wordpress-forget-password/</guid>
+      <description>&lt;p&gt;作为管理员，如果不小心忘记了自己的密码那将是十分尴尬的一件事，好在一般情况下通过找回密码即可解决，然而如果不巧，网站发不了邮件，那该怎么处理呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WordPress 配置发送邮件</title>
+      <link>https://cyh.me/posts/wordpress-email/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/wordpress-email/</guid>
+      <description>&lt;p&gt;很多人可能发现，自己建的 WordPress 站点无法发送邮件，导致无法注册或者无法找回密码，困惑不已。实际上出现这种状况的原因是 WordPress 默认使用的是 PHP 中的 mail 函数发送邮件，但我们并没有对其进行配置，因此不能正常发送邮件。不过解决的方法也很简单，我们使用一个插件，通过第三方邮件商发邮件即可。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shadowsocks 脚本一键安装并开启 BBR 加速</title>
+      <link>https://cyh.me/posts/shadowsocks/</link>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/shadowsocks/</guid>
+      <description>&lt;p&gt;众所周知，在国内无论是想使用 Google 搜索还是上 YouTube 看视频又或者是使用 Twitter、Facebook 等社交平台简直是难上加难，在这里，仅介绍受众最为广泛的 Shadowsocks 搭建教程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WordPress 建站教程：VPS &#43; LNMP 快速建站</title>
+      <link>https://cyh.me/posts/wordpress-website/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/wordpress-website/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;纯干货！本教程使用 VPS + LNMP 教你在 1~2h 内快速搭建 WordPress 网站。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

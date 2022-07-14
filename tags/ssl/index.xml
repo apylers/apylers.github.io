@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SSL on 幸运小站</title><link>https://cyh.me/tags/ssl/</link><description>Recent content in SSL on 幸运小站</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://cyh.me/tags/ssl/index.xml" rel="self" type="application/rss+xml"/><item><title>WordPress 建站教程：VPS + LNMP 快速建站</title><link>https://cyh.me/2019/04/wordpress-website/</link><pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate><guid>https://cyh.me/2019/04/wordpress-website/</guid><description>&lt;p>&lt;strong>纯干货！本教程使用 VPS + LNMP 教你在 1~2h 内快速搭建 WordPress 网站。&lt;/strong>&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SSL on 幸运小站</title>
+    <link>https://cyh.me/tags/ssl/</link>
+    <description>Recent content in SSL on 幸运小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://cyh.me/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WordPress 建站教程：VPS &#43; LNMP 快速建站</title>
+      <link>https://cyh.me/posts/wordpress-website/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/wordpress-website/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;纯干货！本教程使用 VPS + LNMP 教你在 1~2h 内快速搭建 WordPress 网站。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

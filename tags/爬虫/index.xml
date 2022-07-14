@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>爬虫 on 幸运小站</title><link>https://cyh.me/tags/%E7%88%AC%E8%99%AB/</link><description>Recent content in 爬虫 on 幸运小站</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cyh.me/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>网易云音乐歌单搜索爬虫</title><link>https://cyh.me/2020/07/music-163-com-crawler/</link><pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate><guid>https://cyh.me/2020/07/music-163-com-crawler/</guid><description>&lt;p>最近实现了在网易云音乐搜索关键词爬取歌单内容的方法，涉及到部分对 JavaScript 的分析，稍有难度，这里作一些介绍并附上代码！&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>爬虫 on 幸运小站</title>
+    <link>https://cyh.me/tags/%E7%88%AC%E8%99%AB/</link>
+    <description>Recent content in 爬虫 on 幸运小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cyh.me/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网易云音乐歌单搜索爬虫</title>
+      <link>https://cyh.me/posts/music-163-com-crawler/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cyh.me/posts/music-163-com-crawler/</guid>
+      <description>&lt;p&gt;最近实现了在网易云音乐搜索关键词爬取歌单内容的方法，涉及到部分对 JavaScript 的分析，稍有难度，这里作一些介绍并附上代码！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
