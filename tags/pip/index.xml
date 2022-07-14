@@ -12,7 +12,7 @@
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cyh.me/posts/pip-upgrade-all/</guid>
-      <description>&lt;p&gt;在用 pip 管理包时尤其头疼的便是看到有大量更新的时候无法一键升级，这里给出用一条命令解决的方式！&lt;/p&gt;</description>
+      <description>在用 pip 管理包时尤其头疼的便是看到有大量更新的时候无法一键升级，这里给出用一条命令解决的方式！ 1 $ pip3 list -o | awk &amp;#39;NR&amp;gt;2 {print $1}&amp;#39; | tr &amp;#39;\n&amp;#39; &amp;#39; &amp;#39; | xargs pip3 install --upgrade 注意：只</description>
     </item>
     
   </channel>

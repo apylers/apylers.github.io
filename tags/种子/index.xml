@@ -12,7 +12,7 @@
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cyh.me/posts/ubuntu-transmission/</guid>
-      <description>&lt;p&gt;在网上寻找资源的时候时不时可能遇到一些种子链接，必须通过 &lt;a href=&#34;https://www.bittorrent.com/&#34;&gt;BitTorrent&lt;/a&gt; 等工具才能下载，但由于国内的 ip 地址较少，而且一般使用种子分享的资源体积都比较巨大，直接使用本地下载耗费很多无用的时间。我们如果自己搭建一个能长时间运行的服务器来代替我们下载，不仅不占用自己电脑的空间，还能 24h 不间断下载，节约了大量时间空间成本。&lt;/p&gt;</description>
+      <description>在网上寻找资源的时候时不时可能遇到一些种子链接，必须通过 BitTorrent 等工具才能下载，但由于国内的 ip 地址较少，而且一般使用种子分享的资源体积都比较巨大，</description>
     </item>
     
   </channel>

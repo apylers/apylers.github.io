@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>SSH on 幸运小站</title>
+    <title>ssh on 幸运小站</title>
     <link>https://cyh.me/tags/ssh/</link>
-    <description>Recent content in SSH on 幸运小站</description>
+    <description>Recent content in ssh on 幸运小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 13 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://cyh.me/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,7 +12,7 @@
       <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cyh.me/posts/ubuntu-change-ssh-port/</guid>
-      <description>&lt;p&gt;Ubuntu 服务器 SSH 默认端口是 22，在公网下容易受到攻击，在这种情况更换 SSH 端口便是十分重要的，而更换方式也是十分简单。&lt;/p&gt;</description>
+      <description>Ubuntu 服务器 SSH 默认端口是 22，在公网下容易受到攻击，在这种情况更换 SSH 端口便是十分重要的，而更换方式也是十分简单。 编辑文件 /etc/ssh/ssh</description>
     </item>
     
   </channel>

@@ -2,12 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cyh.me/categories/</loc>
-    <lastmod>2020-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/categories/crawl/</loc>
-    <lastmod>2020-07-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://cyh.me/posts/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -29,28 +23,13 @@
     <loc>https://cyh.me/tags/fonttools/</loc>
     <lastmod>2020-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cyh.me/tags/python/</loc>
-    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/categories/tutorials/</loc>
-    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://cyh.me/posts/font-minification/</loc>
     <lastmod>2020-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/%E5%AD%97%E4%BD%93/</loc>
-    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/nginx/</loc>
-    <lastmod>2019-11-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cyh.me/tags/torrent/</loc>
     <lastmod>2019-11-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cyh.me/tags/transmission/</loc>
-    <lastmod>2019-11-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/ubuntu/</loc>
     <lastmod>2019-11-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cyh.me/posts/ubuntu-transmission/</loc>
@@ -62,37 +41,19 @@
     <loc>https://cyh.me/tags/kms/</loc>
     <lastmod>2019-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cyh.me/tags/vps/</loc>
-    <lastmod>2019-11-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/windows/</loc>
-    <lastmod>2019-11-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://cyh.me/posts/ubuntu-kms/</loc>
     <lastmod>2019-11-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cyh.me/tags/crontab/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cyh.me/tags/%E5%90%AF%E5%8A%A8%E9%A1%B9/</loc>
-    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://cyh.me/posts/ubuntu-add-startup/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/bbr/</loc>
-    <lastmod>2019-10-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/posts/nginx-upgrade/</loc>
-    <lastmod>2019-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cyh.me/tags/ssh/</loc>
     <lastmod>2019-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cyh.me/posts/ubuntu-auto-completion/</loc>
-    <lastmod>2019-10-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/posts/google-bbr/</loc>
     <lastmod>2019-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cyh.me/posts/ubuntu-change-ssh-port/</loc>
@@ -107,55 +68,6 @@
     <loc>https://cyh.me/posts/pip-upgrade-all/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cyh.me/tags/%E6%BF%80%E6%B4%BB/</loc>
-    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/posts/windows-activate/</loc>
-    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/v2ray/</loc>
-    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/posts/v2ray/</loc>
-    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/wordpress/</loc>
-    <lastmod>2019-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/posts/wordpress-forget-password/</loc>
-    <lastmod>2019-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/</loc>
-    <lastmod>2019-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/email/</loc>
-    <lastmod>2019-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/posts/wordpress-email/</loc>
-    <lastmod>2019-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/%E9%82%AE%E4%BB%B6/</loc>
-    <lastmod>2019-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/shadowsocks/</loc>
-    <lastmod>2019-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/posts/shadowsocks/</loc>
-    <lastmod>2019-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/%E8%84%9A%E6%9C%AC/</loc>
-    <lastmod>2019-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/lnmp/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/tags/ssl/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cyh.me/posts/wordpress-website/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <loc>https://cyh.me/categories/</loc>
   </url>
 </urlset>
